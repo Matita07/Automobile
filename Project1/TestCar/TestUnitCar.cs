@@ -52,6 +52,7 @@ namespace TestCar
         [TestMethod]
         public void TestSlowDown()
         {
+            int control = 0;
             // Declare and initialize myCar object
             Car testCar = new Car();
 
@@ -59,12 +60,38 @@ namespace TestCar
             int minSpeed = new Random().Next(0, 10);
 
             // Declare and initialize testResult for test the method
-            int testReuslt = testCar.slowDown(minSpeed, 50, 5);
+            int testResult = testCar.slowDown(minSpeed, 50, 5);
 
             // check if the return of the method is correct
-            if (testReuslt != minSpeed)
+            if (testResult != minSpeed)
                 throw new Exception("Error in slowDown()");
+
+            //check if minspeed is greater of 0
+            if (testResult < control)
+                throw new Exception("error, you can't insert a negative number");
         }
-            #endregion
+
+        [TestMethod]
+        public void TestAccelerate()
+        {
+            int control = 0;
+            // Declare and initialize myCar object
+            Car testCar = new Car();
+
+            // Declare and initialize minSpeed randomly
+            int maxspeed = new Random().Next(0, 10);
+
+            // Declare and initialize testResult for test the method
+            int testResult = testCar.Accelerate(maxspeed, 70, 10);
+
+            //check if the return of the method is correct
+            if (testResult != maxspeed)
+                throw new Exception("error in accelerate() ");
+
+            // check if minspeed is greater of 0
+            if (testResult < control)
+                throw new Exception("error, you can't insert a negative number");
         }
+        #endregion
+    }
 }
