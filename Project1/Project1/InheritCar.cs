@@ -43,6 +43,9 @@
             // Call menu() method
             this.menu();
 
+            // Print car status
+            Console.WriteLine(this.carStatus());
+
             // Choice variable
             int choice;
 
@@ -74,42 +77,55 @@
                             this.refill(this.getFillChoice());
                         break;
                     case 4:
-                        // Print Petrol Level
-                        this.printPetrolLevel();
-                        
-                        // Print Speed
-                        this.printSpeed();
+                        if (this.on)
+                        {
+                            // Print Petrol Level
+                            this.printPetrolLevel();
 
-                        // Initialize value for slowing Down & accellerating
-                        int value = this.getValue("Insert Value: ");
+                            // Print Speed
+                            this.printSpeed();
 
-                        // Initialize minSpeed for slowing Down & accellerating
-                        int maxspeed = this.getValue("Insert the speed to reach: ");
+                            // Initialize value for slowing Down & accellerating
+                            int value = this.getValue("Insert Value: ");
 
-                        Console.WriteLine();
+                            // Initialize minSpeed for slowing Down & accellerating
+                            int maxspeed = this.getValue("Insert the speed to reach: ");
 
-                        // Initialize slowDown variable for prograssively slowing down
-                        int accelerate = this.Accelerate(maxspeed, this.speed, value);
-                        Console.WriteLine("Accellerate up... " + accelerate + " Km/h");
-                        
-                        // Print Petrol level
-                        this.printPetrolLevel();
+                            Console.WriteLine();
+
+                            // Initialize slowDown variable for prograssively slowing down
+                            int accelerate = this.Accelerate(maxspeed, this.speed, value);
+                            Console.WriteLine("Accellerate up... " + accelerate + " Km/h");
+
+                            // Print Petrol level
+                            this.printPetrolLevel();
+                        }
+                        else
+                            Console.WriteLine("You can't accellerate, the car in off");
+
                         break;
                     case 5:
-                        // Print Speed
-                        this.printSpeed();
+                        if (!(this.speed == 0))
+                        {
+                            // Print Speed
+                            this.printSpeed();
 
-                        // Initialize value for slowing Down & accellerating
-                        value = this.getValue("Insert Value: ");
+                            // Initialize value for slowing Down & accellerating
+                            int value = this.getValue("Insert Value: ");
 
-                        // Initialize minSpeed for slowing Down & accellerating
-                        int minSpeed = this.getValue("Insert the speed to reach: ");
+                            // Initialize minSpeed for slowing Down & accellerating
+                            int minSpeed = this.getValue("Insert the speed to reach: ");
 
-                        Console.WriteLine();
+                            Console.WriteLine();
 
-                        // Initialize slowDown variable for prograssively slowing down
-                        int slowDown = this.slowDown(minSpeed, this.speed, value);
-                        Console.WriteLine("Slowing down... " + slowDown + " Km/h");
+                            // Initialize slowDown variable for prograssively slowing down
+
+                            int slowDown = this.slowDown(minSpeed, this.speed, value);
+                            Console.WriteLine("Slowing down... " + slowDown + " Km/h");
+                        }
+                        else
+                            Console.WriteLine("You can't slow down, the car is not moving");
+
                         break;
                     default:
                         // Exit the program

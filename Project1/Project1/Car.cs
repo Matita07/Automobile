@@ -15,7 +15,7 @@
         public string brand { get; set; }
         public string model { get; set; }
         public string color { get; set; }
-        private bool on { get; set; }
+        internal bool on { get; set; }
         public engine engineType { get; set; }
         public int speed { get; private set; }
         #endregion
@@ -87,9 +87,12 @@
         {
             // Check boolean variable "on"
             if (this.on)
-                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is On\n";
+                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is On\nSpeed: " + this.speed + " Km/h\n";
             else
-                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is Off\n";
+            {
+                this.speed = 0;
+                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is Off\nSpeed: " + this.speed + " Km/h\n";
+            }
         }
 
         /// <summary>
@@ -136,6 +139,10 @@
                         Console.WriteLine("The " + this.brand + " " + this.model + " stopped");
                     else
                         Console.WriteLine("The " + this.brand + " " + this.model + " stopped beacause there's no petrol");
+                }
+                else
+                {
+                    Console.WriteLine("The car is moving, can't stop now");
                 }
             }
             else
@@ -216,15 +223,22 @@
         /// <returns></returns>
         public int slowDown(int minSpeed, int speed, int value)
         {
-            // Check if the speed is less than or equal to the minSpeed
-            if (speed <= minSpeed)
-                return minSpeed;
+            if (!(this.on))
+            {
+                return -1;
+            }
             else
             {
-                // Print the decrement
-                Console.WriteLine("Slowing down... " + speed + " Km/h");
-                // return the recursive function with the speed slowed
-                return slowDown(minSpeed, speed - value, value);
+                // Check if the speed is less than or equal to the minSpeed
+                if (speed <= minSpeed)
+                    return minSpeed;
+                else
+                {
+                    // Print the decrement
+                    Console.WriteLine("Slowing down... " + speed + " Km/h");
+                    // return the recursive function with the speed slowed
+                    return this.speed = slowDown(minSpeed, speed - value, value);
+                }
             }
         }
 
@@ -242,7 +256,7 @@
                 this.petrolLevel -= value;
 
                 // return the recursive function with the speed augmented
-                return Accelerate(maxSpeed, speed + value, value);
+                return this.speed = Accelerate(maxSpeed, speed + value, value);
             }
 
         }
