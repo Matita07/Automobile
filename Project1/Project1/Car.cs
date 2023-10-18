@@ -17,6 +17,7 @@
         public string color { get; set; }
         private bool on { get; set; }
         public engine engineType { get; set; }
+        public int speed { get; set; }
         public int maxspeed { get; set; }
         #endregion
 
@@ -169,23 +170,29 @@
             Console.WriteLine("Petrol Level = " + this.petrolLevel + print);
         }
 
-        public void InputOutput()
+        
+        public int getValue(string request)
         {
-            int acce;
+            int n;
 
-            //ask how you want accelerate
-            Console.WriteLine("Quanto vuoi accellerare? ");
-            acce = Int32.Parse(Console.ReadLine());
-        }
-        public int Accelerate(int maxspeed, int increase, int actualspeed)//value is how much accelerate the car
-        {
-            //stop condition recursion
-            return Accelerate(10, 20, 30);
+            Console.Write(request);
+            Int32.TryParse(Console.ReadLine(), out n);
+
+            return n;
         }
 
-        public void ShowAccelerate()
+        public int slowDown(int minSpeed, int speed, int value)
         {
-            
+            // Check if the speed is less than p equal to the minSpeed
+            if (speed <= minSpeed)
+                return minSpeed;
+            else
+            {
+                // Print the decrement
+                Console.WriteLine("Slowing down... " + speed + " Km/h");
+                // return the recursive function with the speed slowed
+                return slowDown(minSpeed, speed - value, value);
+            }
         }
         #endregion
     }

@@ -9,7 +9,7 @@
 using Project1;
 
 // Initialize object "Car" with constructores
-InheritCar myCar = new InheritCar(new Random().Next(0, 20), "Fiat", "Panda", "Blue", new Random().Next(0, 20) % 2 == 0 ? true : false, engine.Diesel, 20);
+InheritCar myCar = new InheritCar(new Random().Next(0, 20), "Fiat", "Panda", "Blue", new Random().Next(0, 20) % 2 == 0 ? true : false, engine.Diesel, new Random().Next(50, 100));
 
 // Call print() method
 //myCar.print();
@@ -18,13 +18,4 @@ InheritCar myCar = new InheritCar(new Random().Next(0, 20), "Fiat", "Panda", "Bl
 //Console.WriteLine(myCar.carStatus());
 
 // Call menu() method
-//myCar.getFunction();
-
-//call input and output accelerate()
-myCar.InputOutput();
-
-//call method accelerate()
-myCar.Accelerate(20, 10, 30);
-
-//show method accelerate()
-myCar.ShowAccelerate();
+myCar.getFunction();
