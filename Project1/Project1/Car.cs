@@ -15,7 +15,7 @@
         public string brand { get; set; }
         public string model { get; set; }
         public string color { get; set; }
-        internal bool on { get; set; }
+        internal bool on { get; set; } //defines whether the machine is on or off.
         public engine engineType { get; set; }
         public int speed { get; private set; }
         #endregion
@@ -87,11 +87,11 @@
         {
             // Check boolean variable "on"
             if (this.on)
-                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is On\nSpeed: " + this.speed + " Km/h\n";
+                return "\nThe Car is On\n";
             else
             {
                 this.speed = 0;
-                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is Off\nSpeed: " + this.speed + " Km/h\n";
+                return "\nThe Car is Off\n";
             }
         }
 
@@ -221,7 +221,7 @@
         /// <param name="speed"> actual speed </param>
         /// <param name="value"> value to decrement the speed </param>
         /// <returns></returns>
-        public int slowDown(int minSpeed, int speed, int value)
+        public int deaccelerate(int minSpeed, int speed, int value)
         {
             if (!(this.on))
             {
@@ -237,7 +237,7 @@
                     // Print the decrement
                     Console.WriteLine("Slowing down... " + speed + " Km/h");
                     // return the recursive function with the speed slowed
-                    return this.speed = slowDown(minSpeed, speed - value, value);
+                    return this.speed = deaccelerate(minSpeed, speed - value, value);
                 }
             }
         }

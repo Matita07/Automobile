@@ -32,6 +32,7 @@
             Console.WriteLine("3 - Refill");
             Console.WriteLine("4 - Accellerate");
             Console.WriteLine("5 - Slow Down");
+            Console.WriteLine("6 - Print Speed");
             Console.WriteLine("7 - Levelfuel");
             Console.WriteLine("N - Exit");
         }
@@ -80,12 +81,6 @@
                     case 4:
                         if (this.on)
                         {
-                            // Print Petrol Level
-                            this.printPetrolLevel();
-
-                            // Print Speed
-                            this.printSpeed();
-
                             // Initialize value for slowing Down & accellerating
                             int value = this.getValue("Insert Value: ");
 
@@ -112,9 +107,6 @@
                     case 5:
                         if (!(this.speed == 0))
                         {
-                            // Print Speed
-                            this.printSpeed();
-
                             // Initialize value for slowing Down & accellerating
                             int value = this.getValue("Insert Value: ");
 
@@ -125,16 +117,13 @@
 
                             // Initialize slowDown variable for prograssively slowing down
 
-                            int slowDown = this.slowDown(minSpeed, this.speed, value);
+                            int slowDown = this.deaccelerate(minSpeed, this.speed, value);
                             Console.WriteLine("Slowing down... " + slowDown + " Km/h");
                         }
                         else
                             Console.WriteLine("You can't slow down, the car is not moving");
 
                         break;
-                        case 7:
-                            this.printPetrolLevel();
-                            break;
                     default:
                         // Exit the program
                         Console.WriteLine("Closing...");
@@ -142,7 +131,7 @@
                         break;
                 }
             }
-            while (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5 || choice == 7);
+            while (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5);
         }
 
         /// <summary>
