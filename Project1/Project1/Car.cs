@@ -186,7 +186,9 @@
                 return minSpeed;
             else
             {
+                // Print the decrement
                 Console.WriteLine("Slowing down... " + speed + " Km/h");
+                // return the recursive function with the speed slowed
                 return slowDown(minSpeed, speed - value, value);
             }
         }
