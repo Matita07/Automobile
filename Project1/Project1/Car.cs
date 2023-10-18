@@ -170,6 +170,15 @@
         }
 
         /// <summary>
+        /// Print the speed
+        /// </summary>
+        public void printSpeed()
+        {
+            // Print speed
+            Console.WriteLine("You're going at " + this.speed + " Km/h\n");
+        }
+
+        /// <summary>
         /// get an integer in input by the request
         /// </summary>
         /// <param name="request"> question for the input </param>
