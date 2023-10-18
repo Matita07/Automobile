@@ -124,7 +124,7 @@
 
                             // Initialize slowDown variable for prograssively slowing down
 
-                            int slowDown = this.slowDown(minSpeed, this.speed, value);
+                            int slowDown = this.deaccelerate(minSpeed, this.speed, value);
                             Console.WriteLine("Slowing down... " + slowDown + " Km/h");
                         }
                         else
