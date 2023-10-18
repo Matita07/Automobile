@@ -91,8 +91,7 @@
 
                         break;
                     case 5:
-                        // Print speed
-                        Console.WriteLine("You're going at " + this.speed + " Km/h\n");
+                        this.printSpeed();
 
                         // Initialize value for slowing Down & accellerating
                         value = this.getValue("Insert Value: ");
@@ -104,7 +103,7 @@
 
                         // Initialize slowDown variable for prograssively slowing down
                         int slowDown = this.slowDown(minSpeed, this.speed, value);
-                        Console.WriteLine("Slowing down... " + slowDown);
+                        Console.WriteLine("Slowing down... " + slowDown + " Km/h");
                         break;
                     default:
                         // Exit the program

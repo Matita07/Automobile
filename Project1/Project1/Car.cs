@@ -112,7 +112,7 @@
             {
                 if (this.petrolLevel > 2)
                 {
-                    petrolLevel -= 3; // Copyright: Suecomo
+                    petrolLevel -= 1; // Copyright: Suecomo
                     this.on = true;
                     Console.WriteLine("The " + this.brand + " " + this.model + " started his engine");
                 }
@@ -129,11 +129,14 @@
             // check the petrol level if it's over 0
             if (this.on)
             {
-                this.on = false;
-                if (this.petrolLevel > 0)
-                    Console.WriteLine("The " + this.brand + " " + this.model + " stopped");
-                else
-                    Console.WriteLine("The " + this.brand + " " + this.model + " stopped beacause there's no petrol");
+                if (this.speed <= 0)
+                {
+                    this.on = false;
+                    if (this.petrolLevel > 0)
+                        Console.WriteLine("The " + this.brand + " " + this.model + " stopped");
+                    else
+                        Console.WriteLine("The " + this.brand + " " + this.model + " stopped beacause there's no petrol");
+                }
             }
             else
             {
@@ -168,17 +171,40 @@
             Console.WriteLine("Petrol Level = " + this.petrolLevel + print);
         }
 
-        
+        /// <summary>
+        /// Print the speed
+        /// </summary>
+        public void printSpeed()
+        {
+            // Print speed
+            Console.WriteLine("You're going at " + this.speed + " Km/h\n");
+        }
+
+        /// <summary>
+        /// get an integer in input by the request
+        /// </summary>
+        /// <param name="request"> question for the input </param>
+        /// <returns> inserted number </returns>
         public int getValue(string request)
         {
+            // Declare n for the input
             int n;
 
+            // Question
             Console.Write(request);
             Int32.TryParse(Console.ReadLine(), out n);
-
+            
+            // return the number wrote by the user
             return n;
         }
 
+        /// <summary>
+        /// Slow down method
+        /// </summary>
+        /// <param name="minSpeed"> speed to reach </param>
+        /// <param name="speed"> actual speed </param>
+        /// <param name="value"> value to decrement the speed </param>
+        /// <returns></returns>
         public int slowDown(int minSpeed, int speed, int value)
         {
             // Check if the speed is less than p equal to the minSpeed
