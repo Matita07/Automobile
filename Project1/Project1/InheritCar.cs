@@ -93,7 +93,7 @@
                         Console.WriteLine("Accellerate up... " + accelerate + " Km/h");
                         
                         // Print Petrol level
-                        this.printPetrolLevel(); 
+                        this.printPetrolLevel();
                         break;
                     case 5:
                         // Print Speed
