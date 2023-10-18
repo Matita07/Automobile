@@ -17,7 +17,7 @@
         public string color { get; set; }
         private bool on { get; set; }
         public engine engineType { get; set; }
-        private int speed { get; set; }
+        public int maxspeed { get; set; }
         #endregion
 
         #region Constructors
@@ -27,7 +27,7 @@
         public Car()
         {
             this.petrolLevel = 10;
-            this.speed = 0;
+            this.maxspeed = 0;
         }
 
         /// <summary>
@@ -39,7 +39,7 @@
         /// <param name="color"> car's body color </param>
         /// <param name="on"> check if the car in on or off </param>
         /// <param name="engineType"> car's type of engine </param>
-        public Car(int petrolLevel, string brand, string model, string color, bool on, engine engineType, int speed)
+        public Car(int petrolLevel, string brand, string model, string color, bool on, engine engineType, int maxspeed)
         {
             this.petrolLevel = petrolLevel;
             this.brand = brand;
@@ -47,7 +47,7 @@
             this.color = color;
             this.on = on;
             this.engineType = engineType;
-            this.speed = speed;
+            this.maxspeed = maxspeed;
         }
         #endregion
 
@@ -169,9 +169,23 @@
             Console.WriteLine("Petrol Level = " + this.petrolLevel + print);
         }
 
-        public void accelerate(int accel)
+        public void InputOutput()
         {
+            int acce;
 
+            //ask how you want accelerate
+            Console.WriteLine("Quanto vuoi accellerare? ");
+            acce = Int32.Parse(Console.ReadLine());
+        }
+        public int Accelerate(int maxspeed, int increase, int actualspeed)//value is how much accelerate the car
+        {
+            //stop condition recursion
+            return Accelerate(10, 20, 30);
+        }
+
+        public void ShowAccelerate()
+        {
+            
         }
         #endregion
     }

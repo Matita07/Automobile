@@ -17,7 +17,7 @@
         /// <param name="color"> car's body color </param>
         /// <param name="on"> check if the car in on or off </param>
         /// <param name="engineType"> car's type of engine </param>
-        public InheritCar(int petrolLevel, string brand, string model, string color, bool on, engine engineType) : base(petrolLevel, brand, model, color, on, engineType) {}
+        public InheritCar(int petrolLevel, string brand, string model, string color, bool on, engine engineType, int minspeed) : base(petrolLevel, brand, model, color, on, engineType, minspeed) {}
         #endregion
 
         #region Methods
