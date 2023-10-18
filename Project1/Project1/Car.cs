@@ -113,7 +113,7 @@
             {
                 if (this.petrolLevel > 2)
                 {
-                    petrolLevel -= 3; // Copyright: Suecomo
+                    petrolLevel -= 1; // Copyright: Suecomo
                     this.on = true;
                     Console.WriteLine("The " + this.brand + " " + this.model + " started his engine");
                 }
