@@ -62,7 +62,7 @@ namespace TestCar
             int testReuslt = testCar.slowDown(minSpeed, 30, 5);
 
             // check if the return of the method is correct
-            if (!(testReuslt == minSpeed))
+            if (testReuslt != minSpeed)
                 throw new Exception("Error in slowDown()");
         }
             #endregion
