@@ -11,7 +11,7 @@
     public class Car
     {
         #region Attributes
-        public int petrolLevel { get; private set; }
+        public int petrolLevel { get; set; }
         public string brand { get; set; }
         public string model { get; set; }
         public string color { get; set; }
@@ -223,6 +223,12 @@
         /// <returns></returns>
         public int deaccelerate(int minSpeed, int speed, int value)
         {
+            if (value > minSpeed)
+            {
+                Console.WriteLine("You can't deaccellerate less than the limit");
+                return -1;
+            }
+
             if (!(this.on))
             {
                 return -1;
@@ -244,6 +250,12 @@
 
         public int Accelerate(int maxSpeed, int speed, int value)
         {
+            if(value > maxSpeed)
+            {
+                Console.WriteLine("You can't accellerate more than the limit");
+                return -1;
+            }
+
             // Check if the speed is greater than or equal to the maxSpeed
             if (speed >= maxSpeed)
                 return maxSpeed;
@@ -255,7 +267,7 @@
                 // decremente Petrol Level
                 this.petrolLevel -= value;
 
-                if(this.petrolLevel <= 0)
+                if (this.petrolLevel <= 0)
                 {
                     Console.WriteLine("\nNo more petrol, please refill!\n");
                     return -1;

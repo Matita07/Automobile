@@ -85,12 +85,12 @@
                             int value = this.getValue("Insert Value: ");
 
                             // Initialize minSpeed for slowing Down & accellerating
-                            int maxspeed = this.getValue("Insert the speed to reach: ");
+                            int maxSpeed = this.getValue("Insert the speed to reach: ");
 
                             Console.WriteLine();
 
                             // Initialize slowDown variable for prograssively slowing down
-                            int accelerate = this.Accelerate(maxspeed, this.speed, value);
+                            int accelerate = this.Accelerate(maxSpeed, this.speed, value);
 
                             if (accelerate < 0)
                                 break;
@@ -113,7 +113,11 @@
                             // Initialize minSpeed for slowing Down & accellerating
                             int minSpeed = this.getValue("Insert the speed to reach: ");
 
-                            Console.WriteLine();
+                            if (minSpeed > this.speed)
+                            {
+                                Console.WriteLine("Can't slow down more than the current speed...");
+                                break;
+                            }
 
                             // Initialize slowDown variable for prograssively slowing down
 
@@ -129,6 +133,9 @@
                         this.printSpeed();
                         break;
                     case 7:
+                        if (this.petrolLevel < 0)
+                            this.petrolLevel = 0;
+
                         // Print Petrol Level method
                         this.printPetrolLevel();
                         break;
