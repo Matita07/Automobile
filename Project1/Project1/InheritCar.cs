@@ -17,7 +17,7 @@
         /// <param name="color"> car's body color </param>
         /// <param name="on"> check if the car in on or off </param>
         /// <param name="engineType"> car's type of engine </param>
-        public InheritCar(int petrolLevel, string brand, string model, string color, bool on, engine engineType) : base(petrolLevel, brand, model, color, on, engineType) {}
+        public InheritCar(int petrolLevel, string brand, string model, string color, bool on, engine engineType, int speed) : base(petrolLevel, brand, model, color, on, engineType, speed) {}
         #endregion
 
         #region Methods
@@ -30,6 +30,8 @@
             Console.WriteLine("1 - Start");
             Console.WriteLine("2 - Stop");
             Console.WriteLine("3 - Refill");
+            Console.WriteLine("4 - Accellerate");
+            Console.WriteLine("5 - Slow Down");
             Console.WriteLine("N - Exit");
         }
 
@@ -70,6 +72,25 @@
                         else
                             // Refill the vehicle with refill(...) method calling getFillChoice()
                             this.refill(this.getFillChoice());
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+                        // Print speed
+                        Console.WriteLine("You're going at " + this.speed + " Km/h\n");
+
+                        // Initialize value for slowing Down & accellerating
+                        int value = this.getValue("Insert Value: ");
+
+                        // Initialize minSpeed for slowing Down & accellerating
+                        int minSpeed = this.getValue("Insert the speed to reach: ");
+
+                        Console.WriteLine();
+
+                        // Initialize slowDown variable for prograssively slowing down
+                        int slowDown = this.slowDown(minSpeed, this.speed, value);
+                        Console.WriteLine("Slowing down... " + slowDown);
                         break;
                     default:
                         // Exit the program

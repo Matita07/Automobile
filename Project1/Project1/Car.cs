@@ -17,7 +17,7 @@
         public string color { get; set; }
         private bool on { get; set; }
         public engine engineType { get; set; }
-        private int speed { get; set; }
+        public int speed { get; set; }
         #endregion
 
         #region Constructors
@@ -169,9 +169,26 @@
             Console.WriteLine("Petrol Level = " + this.petrolLevel + print);
         }
 
-        public void accelerate(int accel)
+        public int getValue(string request)
         {
+            int n;
 
+            Console.Write(request);
+            Int32.TryParse(Console.ReadLine(), out n);
+
+            return n;
+        }
+
+        public int slowDown(int minSpeed, int speed, int value)
+        {
+            // Check if the speed is less than p equal to the minSpeed
+            if (speed <= minSpeed)
+                return minSpeed;
+            else
+            {
+                Console.WriteLine("Slowing down... " + speed + " Km/h");
+                return slowDown(minSpeed, speed - value, value);
+            }
         }
         #endregion
     }
