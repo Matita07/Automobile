@@ -130,11 +130,14 @@
             // check the petrol level if it's over 0
             if (this.on)
             {
-                this.on = false;
-                if (this.petrolLevel > 0)
-                    Console.WriteLine("The " + this.brand + " " + this.model + " stopped");
-                else
-                    Console.WriteLine("The " + this.brand + " " + this.model + " stopped beacause there's no petrol");
+                if (this.speed <= 0)
+                {
+                    this.on = false;
+                    if (this.petrolLevel > 0)
+                        Console.WriteLine("The " + this.brand + " " + this.model + " stopped");
+                    else
+                        Console.WriteLine("The " + this.brand + " " + this.model + " stopped beacause there's no petrol");
+                }
             }
             else
             {
