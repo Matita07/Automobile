@@ -133,7 +133,7 @@
                         this.printPetrolLevel();
                         break;
                     default:
-                        // Exit the program
+                        // Exit the Program
                         Console.WriteLine("Closing...");
                         Environment.Exit(0);
                         break;
