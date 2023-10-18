@@ -32,6 +32,7 @@
             Console.WriteLine("3 - Refill");
             Console.WriteLine("4 - Accellerate");
             Console.WriteLine("5 - Slow Down");
+            Console.WriteLine("7 - Levelfuel");
             Console.WriteLine("N - Exit");
         }
 
@@ -131,6 +132,9 @@
                             Console.WriteLine("You can't slow down, the car is not moving");
 
                         break;
+                        case 7:
+                            this.printPetrolLevel();
+                            break;
                     default:
                         // Exit the program
                         Console.WriteLine("Closing...");
@@ -138,7 +142,7 @@
                         break;
                 }
             }
-            while (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5);
+            while (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5 || choice == 7);
         }
 
         /// <summary>
