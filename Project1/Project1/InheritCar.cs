@@ -75,7 +75,7 @@
                         break;
                     case 4:
                         // Print speed
-                        Console.WriteLine("You're going at " + this.speed + " Km/h\n");
+                        this.printSpeed();
 
                         // Initialize value for slowing Down & accellerating
                         int value = this.getValue("Insert Value: ");
