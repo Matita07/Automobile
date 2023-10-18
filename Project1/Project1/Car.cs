@@ -17,6 +17,7 @@
         public string color { get; set; }
         private bool on { get; set; }
         public engine engineType { get; set; }
+        private int speed { get; set; }
         #endregion
 
         #region Constructors
@@ -26,6 +27,7 @@
         public Car()
         {
             this.petrolLevel = 10;
+            this.speed = 0;
         }
 
         /// <summary>
@@ -37,7 +39,7 @@
         /// <param name="color"> car's body color </param>
         /// <param name="on"> check if the car in on or off </param>
         /// <param name="engineType"> car's type of engine </param>
-        public Car(int petrolLevel, string brand, string model, string color, bool on, engine engineType)
+        public Car(int petrolLevel, string brand, string model, string color, bool on, engine engineType, int speed)
         {
             this.petrolLevel = petrolLevel;
             this.brand = brand;
@@ -45,6 +47,7 @@
             this.color = color;
             this.on = on;
             this.engineType = engineType;
+            this.speed = speed;
         }
         #endregion
 
@@ -164,6 +167,11 @@
 
             // Print Petrol Level & print variable
             Console.WriteLine("Petrol Level = " + this.petrolLevel + print);
+        }
+
+        public void accelerate(int accel)
+        {
+
         }
         #endregion
     }
