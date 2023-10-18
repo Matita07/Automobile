@@ -75,7 +75,7 @@
                         break;
                     case 4:
                         // Print speed
-                        Console.WriteLine("You're going at " + this.speed + " Km/h\n");
+                        this.printSpeed();
 
                         // Initialize value for slowing Down & accellerating
                         int value = this.getValue("Insert Value: ");
@@ -112,7 +112,7 @@
                         break;
                 }
             }
-            while (choice == 1 || choice == 2 || choice == 3);
+            while (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5);
         }
 
         /// <summary>
