@@ -74,7 +74,10 @@
                             this.refill(this.getFillChoice());
                         break;
                     case 4:
-                        // Print speed
+                        // Print Petrol Level
+                        this.printPetrolLevel();
+                        
+                        // Print Speed
                         this.printSpeed();
 
                         // Initialize value for slowing Down & accellerating
@@ -87,10 +90,13 @@
 
                         // Initialize slowDown variable for prograssively slowing down
                         int accelerate = this.Accelerate(maxspeed, this.speed, value);
-                        Console.WriteLine("Slowing down... " + accelerate);
-
+                        Console.WriteLine("Accellerate up... " + accelerate + " Km/h");
+                        
+                        // Print Petrol level
+                        this.printPetrolLevel();
                         break;
                     case 5:
+                        // Print Speed
                         this.printSpeed();
 
                         // Initialize value for slowing Down & accellerating

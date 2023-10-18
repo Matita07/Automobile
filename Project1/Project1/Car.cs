@@ -174,6 +174,15 @@
         /// <summary>
         /// Print the speed
         /// </summary>
+        public void printPetrolLevel()
+        {
+            // Print speed
+            Console.WriteLine("Petrol level: " + this.petrolLevel);
+        }
+
+        /// <summary>
+        /// Print the speed
+        /// </summary>
         public void printSpeed()
         {
             // Print speed
@@ -207,7 +216,7 @@
         /// <returns></returns>
         public int slowDown(int minSpeed, int speed, int value)
         {
-            // Check if the speed is less than p equal to the minSpeed
+            // Check if the speed is less than or equal to the minSpeed
             if (speed <= minSpeed)
                 return minSpeed;
             else
@@ -219,14 +228,21 @@
             }
         }
 
-        public int Accelerate(int maxspeed, int speed, int value)
+        public int Accelerate(int maxSpeed, int speed, int value)
         {
-            if (speed >= maxspeed)
-                return maxspeed;
+            // Check if the speed is greater than or equal to the maxSpeed
+            if (speed >= maxSpeed)
+                return maxSpeed;
             else
             {
-                Console.WriteLine("Accelerate up... " + speed + "km/h");
-                return Accelerate(maxspeed, speed + value, value);
+                // Print the increment
+                Console.WriteLine("Accelerate up... " + speed + " km/h");
+
+                // decremente Petrol Level
+                this.petrolLevel -= value;
+
+                // return the recursive function with the speed augmented
+                return Accelerate(maxSpeed, speed + value, value);
             }
 
         }
