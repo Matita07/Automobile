@@ -11,13 +11,13 @@
     public class Car
     {
         #region Attributes
-        public int petrolLevel { get; set; }
+        public int petrolLevel { get; private set; }
         public string brand { get; set; }
         public string model { get; set; }
         public string color { get; set; }
         private bool on { get; set; }
         public engine engineType { get; set; }
-        public int speed { get; set; }
+        public int speed { get; private set; }
         #endregion
 
         #region Constructors
