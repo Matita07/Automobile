@@ -207,8 +207,12 @@
             int n;
 
             // Question
-            Console.Write(request);
-            Int32.TryParse(Console.ReadLine(), out n);
+            do
+            {
+                Console.Write(request);
+                Int32.TryParse(Console.ReadLine(), out n);
+            }
+            while (!(n > 0));
             
             // return the number wrote by the user
             return n;
@@ -223,15 +227,14 @@
         /// <returns></returns>
         public int deaccelerate(int minSpeed, int speed, int value)
         {
-            if (value > minSpeed)
+            if (value > speed)
             {
-                Console.WriteLine("You can't deaccellerate less than the limit");
-                return -1;
+                return 0;
             }
 
             if (!(this.on))
             {
-                return -1;
+                return 0;
             }
             else
             {
@@ -265,12 +268,12 @@
                 Console.WriteLine("Accellerate up... " + speed + " km/h");
 
                 // decremente Petrol Level
-                this.petrolLevel -= value;
+                this.petrolLevel -= maxSpeed;
 
                 if (this.petrolLevel <= 0)
                 {
                     Console.WriteLine("\nNo more petrol, please refill!\n");
-                    return -1;
+                    return 0;
                 }
 
                 // return the recursive function with the speed augmented
