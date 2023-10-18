@@ -59,7 +59,7 @@ namespace TestCar
             int minSpeed = new Random().Next(0, 10);
 
             // Declare and initialize testResult for test the method
-            int testReuslt = testCar.slowDown(minSpeed, 30, 5);
+            int testReuslt = testCar.slowDown(minSpeed, 50, 5);
 
             // check if the return of the method is correct
             if (testReuslt != minSpeed)
