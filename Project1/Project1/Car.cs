@@ -87,11 +87,11 @@
         {
             // Check boolean variable "on"
             if (this.on)
-                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is On\nSpeed: " + this.speed + " Km/h\n";
+                return "\nThe Car is On\n";
             else
             {
                 this.speed = 0;
-                return "\nPetrol Level: " + this.petrolLevel + "\nThe Car is Off\nSpeed: " + this.speed + " Km/h\n";
+                return "\nThe Car is Off\n";
             }
         }
 

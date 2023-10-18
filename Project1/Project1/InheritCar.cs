@@ -32,6 +32,7 @@
             Console.WriteLine("3 - Refill");
             Console.WriteLine("4 - Accellerate");
             Console.WriteLine("5 - Slow Down");
+            Console.WriteLine("6 - Print Speed");
             Console.WriteLine("N - Exit");
         }
 
@@ -79,12 +80,6 @@
                     case 4:
                         if (this.on)
                         {
-                            // Print Petrol Level
-                            this.printPetrolLevel();
-
-                            // Print Speed
-                            this.printSpeed();
-
                             // Initialize value for slowing Down & accellerating
                             int value = this.getValue("Insert Value: ");
 
@@ -111,9 +106,6 @@
                     case 5:
                         if (!(this.speed == 0))
                         {
-                            // Print Speed
-                            this.printSpeed();
-
                             // Initialize value for slowing Down & accellerating
                             int value = this.getValue("Insert Value: ");
 
@@ -131,6 +123,10 @@
                             Console.WriteLine("You can't slow down, the car is not moving");
 
                         break;
+                    case 6:
+                        //call printSpeed() method
+                        this.printSpeed();
+                        break;
                     default:
                         // Exit the program
                         Console.WriteLine("Closing...");
@@ -138,7 +134,7 @@
                         break;
                 }
             }
-            while (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5);
+            while (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5 || choice == 6);
         }
 
         /// <summary>
