@@ -45,6 +45,26 @@ namespace TestCar
                 // bad
                 throw new Exception("Error on carStatus()");
         }
-        #endregion
-    }
+
+        /// <summary>
+        /// Test Car.slowDown()
+        /// </summary>
+        [TestMethod]
+        public void TestSlowDown()
+        {
+            // Declare and initialize myCar object
+            Car testCar = new Car();
+
+            // Declare and initialize minSpeed randomly
+            int minSpeed = new Random().Next(0, 10);
+
+            // Declare and initialize testResult for test the method
+            int testReuslt = testCar.slowDown(minSpeed, 30, 5);
+
+            // check if the return of the method is correct
+            if (!(testReuslt == minSpeed))
+                throw new Exception("Error in slowDown()");
+        }
+            #endregion
+        }
 }
