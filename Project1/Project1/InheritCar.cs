@@ -74,6 +74,20 @@
                             this.refill(this.getFillChoice());
                         break;
                     case 4:
+                        // Print speed
+                        Console.WriteLine("You're going at " + this.speed + " Km/h\n");
+
+                        // Initialize value for slowing Down & accellerating
+                        int value = this.getValue("Insert Value: ");
+
+                        // Initialize minSpeed for slowing Down & accellerating
+                        int maxspeed = this.getValue("Insert the speed to reach: ");
+
+                        Console.WriteLine();
+
+                        // Initialize slowDown variable for prograssively slowing down
+                        int accelerate = this.Accelerate(maxspeed, this.speed, value);
+                        Console.WriteLine("Slowing down... " + accelerate);
 
                         break;
                     case 5:
@@ -81,7 +95,7 @@
                         Console.WriteLine("You're going at " + this.speed + " Km/h\n");
 
                         // Initialize value for slowing Down & accellerating
-                        int value = this.getValue("Insert Value: ");
+                        value = this.getValue("Insert Value: ");
 
                         // Initialize minSpeed for slowing Down & accellerating
                         int minSpeed = this.getValue("Insert the speed to reach: ");

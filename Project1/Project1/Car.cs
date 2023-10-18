@@ -18,7 +18,6 @@
         private bool on { get; set; }
         public engine engineType { get; set; }
         public int speed { get; set; }
-        public int maxspeed { get; set; }
         #endregion
 
         #region Constructors
@@ -28,7 +27,6 @@
         public Car()
         {
             this.petrolLevel = 10;
-            this.maxspeed = 0;
         }
 
         /// <summary>
@@ -40,7 +38,7 @@
         /// <param name="color"> car's body color </param>
         /// <param name="on"> check if the car in on or off </param>
         /// <param name="engineType"> car's type of engine </param>
-        public Car(int petrolLevel, string brand, string model, string color, bool on, engine engineType, int maxspeed)
+        public Car(int petrolLevel, string brand, string model, string color, bool on, engine engineType, int speed)
         {
             this.petrolLevel = petrolLevel;
             this.brand = brand;
@@ -48,7 +46,7 @@
             this.color = color;
             this.on = on;
             this.engineType = engineType;
-            this.maxspeed = maxspeed;
+            this.speed = speed;
         }
         #endregion
 
@@ -193,6 +191,18 @@
                 // return the recursive function with the speed slowed
                 return slowDown(minSpeed, speed - value, value);
             }
+        }
+
+        public int Accelerate(int maxspeed, int speed, int value)
+        {
+            if (speed >= maxspeed)
+                return maxspeed;
+            else
+            {
+                Console.WriteLine("Accelerate up... " + speed + "km/h");
+                return Accelerate(maxspeed, speed + value, value);
+            }
+
         }
         #endregion
     }
