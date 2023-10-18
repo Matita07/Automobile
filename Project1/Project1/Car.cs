@@ -250,10 +250,16 @@
             else
             {
                 // Print the increment
-                Console.WriteLine("Accelerate up... " + speed + " km/h");
+                Console.WriteLine("Accellerate up... " + speed + " km/h");
 
                 // decremente Petrol Level
                 this.petrolLevel -= value;
+
+                if(this.petrolLevel <= 0)
+                {
+                    Console.WriteLine("\nNo more petrol, please refill!\n");
+                    return -1;
+                }
 
                 // return the recursive function with the speed augmented
                 return this.speed = Accelerate(maxSpeed, speed + value, value);

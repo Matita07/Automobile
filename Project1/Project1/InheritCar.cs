@@ -95,7 +95,11 @@
 
                             // Initialize slowDown variable for prograssively slowing down
                             int accelerate = this.Accelerate(maxspeed, this.speed, value);
-                            Console.WriteLine("Accellerate up... " + accelerate + " Km/h");
+
+                            if (accelerate < 0)
+                                break;
+                            else
+                                Console.WriteLine("Accellerate up... " + accelerate + " Km/h");
 
                             // Print Petrol level
                             this.printPetrolLevel();
