@@ -169,16 +169,31 @@
             Console.WriteLine("Petrol Level = " + this.petrolLevel + print);
         }
 
+        /// <summary>
+        /// get an integer in input by the request
+        /// </summary>
+        /// <param name="request"> question for the input </param>
+        /// <returns> inserted number </returns>
         public int getValue(string request)
         {
+            // Declare n for the input
             int n;
 
+            // Question
             Console.Write(request);
             Int32.TryParse(Console.ReadLine(), out n);
-
+            
+            // return the number wrote by the user
             return n;
         }
 
+        /// <summary>
+        /// Slow down method
+        /// </summary>
+        /// <param name="minSpeed"> speed to reach </param>
+        /// <param name="speed"> actual speed </param>
+        /// <param name="value"> value to decrement the speed </param>
+        /// <returns></returns>
         public int slowDown(int minSpeed, int speed, int value)
         {
             // Check if the speed is less than p equal to the minSpeed
