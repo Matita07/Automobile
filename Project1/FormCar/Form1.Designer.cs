@@ -29,69 +29,47 @@
         private void InitializeComponent()
         {
             Menu = new MenuStrip();
-            startToolStripMenuItem = new ToolStripMenuItem();
-            stopToolStripMenuItem = new ToolStripMenuItem();
-            fuelToolStripMenuItem = new ToolStripMenuItem();
-            refillToolStripMenuItem = new ToolStripMenuItem();
-            viewFuelLevelToolStripMenuItem = new ToolStripMenuItem();
-            moveToolStripMenuItem = new ToolStripMenuItem();
+            startOption = new ToolStripMenuItem();
+            stopOption = new ToolStripMenuItem();
+            moveOption = new ToolStripMenuItem();
             accellerateToolStripMenuItem = new ToolStripMenuItem();
             slowDownToolStripMenuItem = new ToolStripMenuItem();
-            viewSpeedKmhToolStripMenuItem = new ToolStripMenuItem();
+            refillOption = new ToolStripMenuItem();
+            label1 = new Label();
             Menu.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
             // 
             Menu.ImageScalingSize = new Size(20, 20);
-            Menu.Items.AddRange(new ToolStripItem[] { startToolStripMenuItem, stopToolStripMenuItem, fuelToolStripMenuItem, moveToolStripMenuItem });
+            Menu.Items.AddRange(new ToolStripItem[] { startOption, stopOption, refillOption, moveOption });
             Menu.Location = new Point(0, 0);
             Menu.Name = "Menu";
             Menu.Size = new Size(800, 54);
             Menu.TabIndex = 0;
             Menu.Text = "Menu";
             // 
-            // startToolStripMenuItem
+            // startOption
             // 
-            startToolStripMenuItem.AutoSize = false;
-            startToolStripMenuItem.Name = "startToolStripMenuItem";
-            startToolStripMenuItem.Size = new Size(180, 50);
-            startToolStripMenuItem.Text = "Start";
+            startOption.AutoSize = false;
+            startOption.Name = "startOption";
+            startOption.Size = new Size(180, 50);
+            startOption.Text = "Start";
             // 
-            // stopToolStripMenuItem
+            // stopOption
             // 
-            stopToolStripMenuItem.AutoSize = false;
-            stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            stopToolStripMenuItem.Size = new Size(180, 50);
-            stopToolStripMenuItem.Text = "Stop";
+            stopOption.AutoSize = false;
+            stopOption.Name = "stopOption";
+            stopOption.Size = new Size(180, 50);
+            stopOption.Text = "Stop";
             // 
-            // fuelToolStripMenuItem
+            // moveOption
             // 
-            fuelToolStripMenuItem.AutoSize = false;
-            fuelToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { refillToolStripMenuItem, viewFuelLevelToolStripMenuItem });
-            fuelToolStripMenuItem.Name = "fuelToolStripMenuItem";
-            fuelToolStripMenuItem.Size = new Size(180, 50);
-            fuelToolStripMenuItem.Text = "Fuel";
-            // 
-            // refillToolStripMenuItem
-            // 
-            refillToolStripMenuItem.Name = "refillToolStripMenuItem";
-            refillToolStripMenuItem.Size = new Size(224, 26);
-            refillToolStripMenuItem.Text = "Refill";
-            // 
-            // viewFuelLevelToolStripMenuItem
-            // 
-            viewFuelLevelToolStripMenuItem.Name = "viewFuelLevelToolStripMenuItem";
-            viewFuelLevelToolStripMenuItem.Size = new Size(224, 26);
-            viewFuelLevelToolStripMenuItem.Text = "View Fuel Level";
-            // 
-            // moveToolStripMenuItem
-            // 
-            moveToolStripMenuItem.AutoSize = false;
-            moveToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { accellerateToolStripMenuItem, slowDownToolStripMenuItem, viewSpeedKmhToolStripMenuItem });
-            moveToolStripMenuItem.Name = "moveToolStripMenuItem";
-            moveToolStripMenuItem.Size = new Size(180, 50);
-            moveToolStripMenuItem.Text = "Move";
+            moveOption.AutoSize = false;
+            moveOption.DropDownItems.AddRange(new ToolStripItem[] { accellerateToolStripMenuItem, slowDownToolStripMenuItem });
+            moveOption.Name = "moveOption";
+            moveOption.Size = new Size(180, 50);
+            moveOption.Text = "Move";
             // 
             // accellerateToolStripMenuItem
             // 
@@ -105,17 +83,28 @@
             slowDownToolStripMenuItem.Size = new Size(224, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
-            // viewSpeedKmhToolStripMenuItem
+            // refillOption
             // 
-            viewSpeedKmhToolStripMenuItem.Name = "viewSpeedKmhToolStripMenuItem";
-            viewSpeedKmhToolStripMenuItem.Size = new Size(224, 26);
-            viewSpeedKmhToolStripMenuItem.Text = "View Speed (Km/h)";
+            refillOption.AutoSize = false;
+            refillOption.Name = "refillOption";
+            refillOption.Size = new Size(180, 50);
+            refillOption.Text = "Refill";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 64);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 1;
+            label1.Text = "label1";
             // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(Menu);
             MainMenuStrip = Menu;
             Name = "FormCar";
@@ -129,14 +118,12 @@
         #endregion
 
         private MenuStrip Menu;
-        private ToolStripMenuItem startToolStripMenuItem;
-        private ToolStripMenuItem stopToolStripMenuItem;
-        private ToolStripMenuItem fuelToolStripMenuItem;
-        private ToolStripMenuItem refillToolStripMenuItem;
-        private ToolStripMenuItem viewFuelLevelToolStripMenuItem;
-        private ToolStripMenuItem moveToolStripMenuItem;
+        private ToolStripMenuItem startOption;
+        private ToolStripMenuItem stopOption;
+        private ToolStripMenuItem moveOption;
         private ToolStripMenuItem accellerateToolStripMenuItem;
         private ToolStripMenuItem slowDownToolStripMenuItem;
-        private ToolStripMenuItem viewSpeedKmhToolStripMenuItem;
+        private ToolStripMenuItem refillOption;
+        private Label label1;
     }
 }
