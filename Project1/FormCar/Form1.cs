@@ -29,7 +29,6 @@ namespace FormCar
         private void accellerateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelInput.Visible = true;
-            lblfuel.Text = "Fuel = " + myCar.petrolLevel.ToString();
         }
 
         private void slowDownToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +43,13 @@ namespace FormCar
 
             int slowDown = myCar.deaccelerate(this.valueSpeed, myCar.speed, this.value);
             TxtOutput.Text = "Speed = " + slowDown + " Km/h";
+
+            lblfuel.Text = "Fuel = " + myCar.petrolLevel.ToString();
+        }
+        private void FormCar_Load(object sender, EventArgs e)
+        {
+            lblRqstFuel.Visible = false;
+            nmrcFuel.Visible = false;
         }
 
         private void btnRequest_Click(object sender, EventArgs e)
