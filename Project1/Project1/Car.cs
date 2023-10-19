@@ -257,7 +257,7 @@
         {
             if(value > maxSpeed)
             {
-                Console.WriteLine("You can't accellerate more than the limit");
+                //Console.WriteLine("You can't accellerate more than the limit");
                 return -1;
             }
 
@@ -267,7 +267,7 @@
             else
             {
                 // Print the increment
-                Console.WriteLine("Accellerate up... " + speed + " km/h");
+                //Console.WriteLine("Accellerate up... " + speed + " km/h");
 
                 // decremente Petrol Level
                 this.petrolLevel -= maxSpeed;
@@ -275,7 +275,7 @@
                 //stop condition
                 if (this.petrolLevel <= 0)
                 {
-                    Console.WriteLine("\nNo more petrol, please refill!\n");
+                    //Console.WriteLine("\nNo more petrol, please refill!\n");
                     return 0;
                 }
 

@@ -17,6 +17,7 @@ namespace FormCar
         {
             TxtOutput.Text = myCar.start();
             panelInput.Visible = false;
+            lblfuel.Text = "Fuel = " + myCar.petrolLevel.ToString();
         }
 
         private void stopOption_Click(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace FormCar
         private void accellerateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelInput.Visible = true;
+            lblfuel.Text = "Fuel = " + myCar.petrolLevel.ToString();
         }
 
         private void slowDownToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,19 +46,9 @@ namespace FormCar
             TxtOutput.Text = "Speed = " + slowDown + " Km/h";
         }
 
-        private void lvlfuel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Rqsfuel_Click(object sender, EventArgs e)
         {
-            TxtOutput.Text = "How much reifl you want? ";
-        }
-
-        private void FormCar_Load(object sender, EventArgs e)
-        {
-
+            TxtOutput.Text = "How much refill you want? ";
         }
     }
 }

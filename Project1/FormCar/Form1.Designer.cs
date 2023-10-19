@@ -136,7 +136,6 @@
             lvlfuel.TabIndex = 3;
             lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
-            lvlfuel.Click += lvlfuel_Click;
             // 
             // lblfuel
             // 
@@ -224,7 +223,6 @@
             MainMenuStrip = Menu;
             Name = "FormCar";
             Text = "Form Car";
-            Load += FormCar_Load;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)inputSpeed1).EndInit();
