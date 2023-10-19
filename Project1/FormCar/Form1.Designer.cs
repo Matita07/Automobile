@@ -37,6 +37,7 @@
             slowDownToolStripMenuItem = new ToolStripMenuItem();
             labelSpeed = new Label();
             labelFuel = new Label();
+            lvlfuel = new Button();
             Menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -95,7 +96,7 @@
             // 
             labelSpeed.AutoSize = true;
             labelSpeed.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            labelSpeed.Location = new Point(12, 64);
+            labelSpeed.Location = new Point(12, 411);
             labelSpeed.Name = "labelSpeed";
             labelSpeed.Size = new Size(173, 30);
             labelSpeed.TabIndex = 1;
@@ -105,17 +106,27 @@
             // 
             labelFuel.AutoSize = true;
             labelFuel.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            labelFuel.Location = new Point(12, 94);
+            labelFuel.Location = new Point(690, 360);
             labelFuel.Name = "labelFuel";
-            labelFuel.Size = new Size(108, 30);
+            labelFuel.Size = new Size(98, 30);
             labelFuel.TabIndex = 2;
-            labelFuel.Text = "Fuel = " +  + " L";
+            labelFuel.Text = "Fuel =  0";
+            // 
+            // lvlfuel
+            // 
+            lvlfuel.Location = new Point(674, 396);
+            lvlfuel.Name = "lvlfuel";
+            lvlfuel.Size = new Size(114, 45);
+            lvlfuel.TabIndex = 3;
+            lvlfuel.Text = "Level fuel";
+            lvlfuel.UseVisualStyleBackColor = true;
             // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lvlfuel);
             Controls.Add(labelFuel);
             Controls.Add(labelSpeed);
             Controls.Add(Menu);
@@ -139,5 +150,6 @@
         private ToolStripMenuItem refillOption;
         private Label labelSpeed;
         private Label labelFuel;
+        private Button lvlfuel;
     }
 }

@@ -10,5 +10,9 @@ namespace FormCar
         {
             InitializeComponent();
         }
+        private void accellerateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
