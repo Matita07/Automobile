@@ -31,22 +31,23 @@
             Menu = new MenuStrip();
             startOption = new ToolStripMenuItem();
             stopOption = new ToolStripMenuItem();
-            refillOption = new ToolStripMenuItem();
             moveOption = new ToolStripMenuItem();
             accellerateToolStripMenuItem = new ToolStripMenuItem();
             slowDownToolStripMenuItem = new ToolStripMenuItem();
             labelSpeed = new Label();
             labelFuel = new Label();
             lvlfuel = new Button();
+            lblfuel = new Label();
             Menu.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
             // 
             Menu.ImageScalingSize = new Size(20, 20);
-            Menu.Items.AddRange(new ToolStripItem[] { startOption, stopOption, refillOption, moveOption });
+            Menu.Items.AddRange(new ToolStripItem[] { startOption, stopOption, moveOption });
             Menu.Location = new Point(0, 0);
             Menu.Name = "Menu";
+            Menu.Padding = new Padding(80, 2, 0, 2);
             Menu.Size = new Size(800, 54);
             Menu.TabIndex = 0;
             Menu.Text = "Menu";
@@ -65,13 +66,6 @@
             stopOption.Size = new Size(180, 50);
             stopOption.Text = "Stop";
             // 
-            // refillOption
-            // 
-            refillOption.AutoSize = false;
-            refillOption.Name = "refillOption";
-            refillOption.Size = new Size(180, 50);
-            refillOption.Text = "Refill";
-            // 
             // moveOption
             // 
             moveOption.AutoSize = false;
@@ -83,34 +77,28 @@
             // accellerateToolStripMenuItem
             // 
             accellerateToolStripMenuItem.Name = "accellerateToolStripMenuItem";
-            accellerateToolStripMenuItem.Size = new Size(167, 26);
+            accellerateToolStripMenuItem.Size = new Size(224, 26);
             accellerateToolStripMenuItem.Text = "Accellerate";
             // 
             // slowDownToolStripMenuItem
             // 
             slowDownToolStripMenuItem.Name = "slowDownToolStripMenuItem";
-            slowDownToolStripMenuItem.Size = new Size(167, 26);
+            slowDownToolStripMenuItem.Size = new Size(224, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
             // labelSpeed
             // 
-            labelSpeed.AutoSize = true;
-            labelSpeed.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            labelSpeed.Location = new Point(12, 411);
+            labelSpeed.Location = new Point(0, 0);
             labelSpeed.Name = "labelSpeed";
-            labelSpeed.Size = new Size(173, 30);
-            labelSpeed.TabIndex = 1;
-            labelSpeed.Text = "Speed = " + myCar.speed + " Km/h";
+            labelSpeed.Size = new Size(100, 23);
+            labelSpeed.TabIndex = 8;
             // 
             // labelFuel
             // 
-            labelFuel.AutoSize = true;
-            labelFuel.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            labelFuel.Location = new Point(690, 360);
+            labelFuel.Location = new Point(0, 0);
             labelFuel.Name = "labelFuel";
-            labelFuel.Size = new Size(98, 30);
-            labelFuel.TabIndex = 2;
-            labelFuel.Text = "Fuel = " + myCar.petrolLevel + " L";
+            labelFuel.Size = new Size(100, 23);
+            labelFuel.TabIndex = 7;
             // 
             // lvlfuel
             // 
@@ -118,14 +106,24 @@
             lvlfuel.Name = "lvlfuel";
             lvlfuel.Size = new Size(114, 45);
             lvlfuel.TabIndex = 3;
-            lvlfuel.Text = "Level fuel";
+            lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
+            // 
+            // lblfuel
+            // 
+            lblfuel.AutoSize = true;
+            lblfuel.Location = new Point(702, 373);
+            lblfuel.Name = "lblfuel";
+            lblfuel.Size = new Size(0, 20);
+            lblfuel.TabIndex = 6;
+            lblfuel.Text = "fuel: " + myCar.petrolLevel;
             // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblfuel);
             Controls.Add(lvlfuel);
             Controls.Add(labelFuel);
             Controls.Add(labelSpeed);
@@ -147,9 +145,9 @@
         private ToolStripMenuItem moveOption;
         private ToolStripMenuItem accellerateToolStripMenuItem;
         private ToolStripMenuItem slowDownToolStripMenuItem;
-        private ToolStripMenuItem refillOption;
         private Label labelSpeed;
         private Label labelFuel;
         private Button lvlfuel;
+        private Label lblfuel;
     }
 }
