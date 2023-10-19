@@ -82,13 +82,13 @@
             // accellerateToolStripMenuItem
             // 
             accellerateToolStripMenuItem.Name = "accellerateToolStripMenuItem";
-            accellerateToolStripMenuItem.Size = new Size(224, 26);
+            accellerateToolStripMenuItem.Size = new Size(167, 26);
             accellerateToolStripMenuItem.Text = "Accellerate";
             // 
             // slowDownToolStripMenuItem
             // 
             slowDownToolStripMenuItem.Name = "slowDownToolStripMenuItem";
-            slowDownToolStripMenuItem.Size = new Size(224, 26);
+            slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
             // labelSpeed
