@@ -221,8 +221,10 @@
 
         public int deaccellera(int speed)
         {
+            // check if the car is on
             if (this.on)
             {
+                // check if the fuel isn't 0
                 if (this.petrolLevel <= 0)
                     return 0;
                 else
