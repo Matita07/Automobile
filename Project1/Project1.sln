@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project1", "Project1\Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCar", "TestCar\TestCar.csproj", "{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto form app", "Auto form app\Auto form app.csproj", "{BB251C47-F591-4BAF-9D22-1B2B0AF5D209}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA4A9F24-1098-4E96-840A-1DCB3CB2A284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB251C47-F591-4BAF-9D22-1B2B0AF5D209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB251C47-F591-4BAF-9D22-1B2B0AF5D209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB251C47-F591-4BAF-9D22-1B2B0AF5D209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB251C47-F591-4BAF-9D22-1B2B0AF5D209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
