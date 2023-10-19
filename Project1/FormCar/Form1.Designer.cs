@@ -100,7 +100,7 @@
             labelSpeed.Name = "labelSpeed";
             labelSpeed.Size = new Size(173, 30);
             labelSpeed.TabIndex = 1;
-            labelSpeed.Text = "Speed = 0 Km/h";
+            labelSpeed.Text = "Speed = " + myCar.speed + " Km/h";
             // 
             // labelFuel
             // 
@@ -110,7 +110,7 @@
             labelFuel.Name = "labelFuel";
             labelFuel.Size = new Size(98, 30);
             labelFuel.TabIndex = 2;
-            labelFuel.Text = "Fuel =  0";
+            labelFuel.Text = "Fuel = " + myCar.petrolLevel + " L";
             // 
             // lvlfuel
             // 
