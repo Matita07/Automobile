@@ -17,7 +17,8 @@ namespace FormCar
         {
             TxtOutput.Text = myCar.start();
             panelInput.Visible = false;
-            lblfuel.Text = "Fuel = " + myCar.petrolLevel.ToString();
+
+
         }
 
         private void stopOption_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace FormCar
 
             int speed;
 
-            if(btnSend.Tag == "0")
+            if (btnSend.Tag == "0")
                 speed = myCar.deaccelerate(this.valueSpeed, myCar.speed, this.value);
             else
                 speed = myCar.Accelerate(this.valueSpeed, myCar.speed, this.value);
@@ -54,15 +55,11 @@ namespace FormCar
 
             if (myCar.petrolLevel <= 0)
                 myCar.petrolLevel = 0;
-                
-            lblfuel.Text = "fuel: " + myCar.petrolLevel;
-        }
-        private void FormCar_Load(object sender, EventArgs e)
-        {
-            lblRqstFuel.Visible = false;
-            nmrcFuel.Visible = false;
-        }
 
+            lblfuel.Text = "fuel: " + myCar.petrolLevel;
+
+            Speed.Text = "Speed: " + this.valueSpeed;
+        }
         private void btnRequest_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
@@ -80,7 +77,29 @@ namespace FormCar
                 lblfuel.Text = "fuel: " + myCar.petrolLevel;
             }
             else
-                lblfuel.Text = "fuel: " + myCar.petrolLevel;   
+                lblfuel.Text = "fuel: " + myCar.petrolLevel;
+
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //decreas that car have beacuese the driver it's not accelerating
+            int decrease = 1;
+
+            if ((myCar.speed >= 0) && (myCar.petrolLevel >= 0) && (myCar.on))
+            {
+                
+            }
+
+            Speed.Text = "Speed: ";
+        }
+
+        private void FormCar_Load_1(object sender, EventArgs e)
+        {
+            Speed.Text = "Speed: " + myCar.speed;
+            lblfuel.Text = "Fuel = " + myCar.petrolLevel.ToString();
+            panel1.Visible = false;
         }
     }
 }

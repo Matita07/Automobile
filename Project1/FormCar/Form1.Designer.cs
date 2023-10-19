@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Menu = new MenuStrip();
             startOption = new ToolStripMenuItem();
             stopOption = new ToolStripMenuItem();
             moveOption = new ToolStripMenuItem();
             accellerateToolStripMenuItem = new ToolStripMenuItem();
             slowDownToolStripMenuItem = new ToolStripMenuItem();
-            labelSpeed = new Label();
             labelFuel = new Label();
             lvlfuel = new Button();
             lblfuel = new Label();
@@ -49,7 +49,8 @@
             btnRequest = new Button();
             lblRqstFuel = new Label();
             panel1 = new Panel();
-            lblSpeed = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            Speed = new Label();
             Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)inputSpeed1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)inputSpeed2).BeginInit();
@@ -106,13 +107,6 @@
             slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             slowDownToolStripMenuItem.Click += slowDownToolStripMenuItem_Click;
-            // 
-            // labelSpeed
-            // 
-            labelSpeed.Location = new Point(0, 0);
-            labelSpeed.Name = "labelSpeed";
-            labelSpeed.Size = new Size(100, 23);
-            labelSpeed.TabIndex = 0;
             // 
             // labelFuel
             // 
@@ -224,7 +218,6 @@
             // lblRqstFuel
             // 
             lblRqstFuel.AutoSize = true;
-
             lblRqstFuel.Location = new Point(3, 8);
             lblRqstFuel.Name = "lblRqstFuel";
             lblRqstFuel.Size = new Size(184, 20);
@@ -241,19 +234,27 @@
             panel1.TabIndex = 18;
             panel1.Visible = false;
             // 
-            // lblSpeed
+            // timer1
             // 
-            lblSpeed.Location = new Point(0, 0);
-            lblSpeed.Name = "lblSpeed";
-            lblSpeed.Size = new Size(100, 23);
-            lblSpeed.TabIndex = 21;
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
+            // Speed
+            // 
+            Speed.AutoSize = true;
+            Speed.Location = new Point(11, 396);
+            Speed.Name = "Speed";
+            Speed.Size = new Size(50, 20);
+            Speed.TabIndex = 22;
+            Speed.Text = "label3";
             // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 451);
-            Controls.Add(lblSpeed);
+            Controls.Add(Speed);
             Controls.Add(panel1);
             Controls.Add(btnRequest);
             Controls.Add(panelInput);
@@ -264,6 +265,7 @@
             MainMenuStrip = Menu;
             Name = "FormCar";
             Text = "Form Car";
+            Load += FormCar_Load_1;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)inputSpeed1).EndInit();
@@ -285,7 +287,6 @@
         private ToolStripMenuItem moveOption;
         private ToolStripMenuItem accellerateToolStripMenuItem;
         private ToolStripMenuItem slowDownToolStripMenuItem;
-        private Label labelSpeed;
         private Label labelFuel;
         private Button lvlfuel;
         private Label lblfuel;
@@ -300,6 +301,7 @@
         private Button btnRequest;
         private Label lblRqstFuel;
         private Panel panel1;
-        private Label lblSpeed;
+        private System.Windows.Forms.Timer timer1;
+        private Label Speed;
     }
 }
