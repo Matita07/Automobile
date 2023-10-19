@@ -45,7 +45,7 @@ namespace FormCar
 
             int speed;
 
-            if(btnSend.Tag == "0")
+            if (btnSend.Tag == "0")
                 speed = myCar.deaccelerate(this.valueSpeed, myCar.speed, this.value);
             else
                 speed = myCar.Accelerate(this.valueSpeed, myCar.speed, this.value);
@@ -54,7 +54,7 @@ namespace FormCar
 
             if (myCar.petrolLevel <= 0)
                 myCar.petrolLevel = 0;
-                
+
             lblfuel.Text = "fuel: " + myCar.petrolLevel;
         }
         private void FormCar_Load(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace FormCar
                 lblfuel.Text = "fuel: " + myCar.petrolLevel;
             }
             else
-                lblfuel.Text = "fuel: " + myCar.petrolLevel;   
+                lblfuel.Text = "fuel: " + myCar.petrolLevel;
         }
     }
 }

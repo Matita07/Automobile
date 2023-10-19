@@ -270,7 +270,13 @@
                 //Console.WriteLine("Accellerate up... " + speed + " km/h");
 
                 // decremente Petrol Level
-                this.petrolLevel -= maxSpeed;
+                if (maxSpeed % value == 0)
+                    this.petrolLevel -= value;
+                else
+                {
+                    value = maxSpeed - speed;
+                    this.petrolLevel -= value;
+                }
 
                 //stop condition
                 if (this.petrolLevel <= 0)

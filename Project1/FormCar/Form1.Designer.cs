@@ -35,7 +35,6 @@
             accellerateToolStripMenuItem = new ToolStripMenuItem();
             slowDownToolStripMenuItem = new ToolStripMenuItem();
             labelSpeed = new Label();
-            labelFuel = new Label();
             lvlfuel = new Button();
             lblfuel = new Label();
             TxtOutput = new RichTextBox();
@@ -114,13 +113,6 @@
             labelSpeed.Size = new Size(100, 23);
             labelSpeed.TabIndex = 0;
             // 
-            // labelFuel
-            // 
-            labelFuel.Location = new Point(0, 0);
-            labelFuel.Name = "labelFuel";
-            labelFuel.Size = new Size(100, 23);
-            labelFuel.TabIndex = 0;
-            // 
             // lvlfuel
             // 
             lvlfuel.Location = new Point(674, 396);
@@ -138,6 +130,7 @@
             lblfuel.Name = "lblfuel";
             lblfuel.Size = new Size(0, 20);
             lblfuel.TabIndex = 6;
+            lblfuel.Text = "fuel: " + myCar.petrolLevel;
             // 
             // TxtOutput
             // 
@@ -224,7 +217,6 @@
             // lblRqstFuel
             // 
             lblRqstFuel.AutoSize = true;
-
             lblRqstFuel.Location = new Point(3, 8);
             lblRqstFuel.Name = "lblRqstFuel";
             lblRqstFuel.Size = new Size(184, 20);
@@ -235,7 +227,7 @@
             // 
             panel1.Controls.Add(lblRqstFuel);
             panel1.Controls.Add(nmrcFuel);
-            panel1.Location = new Point(591, 303);
+            panel1.Location = new Point(554, 278);
             panel1.Name = "panel1";
             panel1.Size = new Size(197, 67);
             panel1.TabIndex = 18;
@@ -286,7 +278,6 @@
         private ToolStripMenuItem accellerateToolStripMenuItem;
         private ToolStripMenuItem slowDownToolStripMenuItem;
         private Label labelSpeed;
-        private Label labelFuel;
         private Button lvlfuel;
         private Label lblfuel;
         private RichTextBox TxtOutput;
