@@ -39,7 +39,16 @@
             lvlfuel = new Button();
             lblfuel = new Label();
             TxtOutput = new RichTextBox();
+            inputSpeed1 = new NumericUpDown();
+            inputSpeed2 = new NumericUpDown();
+            label1 = new Label();
+            label2 = new Label();
+            panelInput = new Panel();
+            btnSend = new Button();
             Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)inputSpeed1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)inputSpeed2).BeginInit();
+            panelInput.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
@@ -67,6 +76,7 @@
             stopOption.Name = "stopOption";
             stopOption.Size = new Size(180, 50);
             stopOption.Text = "Stop";
+            stopOption.Click += stopOption_Click;
             // 
             // moveOption
             // 
@@ -81,12 +91,28 @@
             accellerateToolStripMenuItem.Name = "accellerateToolStripMenuItem";
             accellerateToolStripMenuItem.Size = new Size(167, 26);
             accellerateToolStripMenuItem.Text = "Accellerate";
+            accellerateToolStripMenuItem.Click += accellerateToolStripMenuItem_Click;
             // 
             // slowDownToolStripMenuItem
             // 
             slowDownToolStripMenuItem.Name = "slowDownToolStripMenuItem";
             slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
+            slowDownToolStripMenuItem.Click += slowDownToolStripMenuItem_Click;
+            // 
+            // labelSpeed
+            // 
+            labelSpeed.Location = new Point(0, 0);
+            labelSpeed.Name = "labelSpeed";
+            labelSpeed.Size = new Size(100, 23);
+            labelSpeed.TabIndex = 0;
+            // 
+            // labelFuel
+            // 
+            labelFuel.Location = new Point(0, 0);
+            labelFuel.Name = "labelFuel";
+            labelFuel.Size = new Size(100, 23);
+            labelFuel.TabIndex = 0;
             // 
             // labelSpeed
             // 
@@ -124,16 +150,72 @@
             // 
             TxtOutput.Location = new Point(12, 77);
             TxtOutput.Name = "TxtOutput";
-            TxtOutput.Size = new Size(776, 65);
+            TxtOutput.Size = new Size(776, 88);
             TxtOutput.TabIndex = 9;
             TxtOutput.Text = "";
-            TxtOutput.TextChanged += TxtOutput_TextChanged;
+            // 
+            // inputSpeed1
+            // 
+            inputSpeed1.Location = new Point(3, 33);
+            inputSpeed1.Name = "inputSpeed1";
+            inputSpeed1.Size = new Size(193, 27);
+            inputSpeed1.TabIndex = 10;
+            // 
+            // inputSpeed2
+            // 
+            inputSpeed2.Location = new Point(3, 90);
+            inputSpeed2.Name = "inputSpeed2";
+            inputSpeed2.Size = new Size(193, 27);
+            inputSpeed2.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(154, 20);
+            label1.TabIndex = 12;
+            label1.Text = "Insert speed to reach: ";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(3, 67);
+            label2.Name = "label2";
+            label2.Size = new Size(193, 20);
+            label2.TabIndex = 13;
+            label2.Text = "Insert the step for speeding:";
+            // 
+            // panelInput
+            // 
+            panelInput.BackColor = SystemColors.Control;
+            panelInput.Controls.Add(btnSend);
+            panelInput.Controls.Add(label1);
+            panelInput.Controls.Add(label2);
+            panelInput.Controls.Add(inputSpeed1);
+            panelInput.Controls.Add(inputSpeed2);
+            panelInput.Location = new Point(12, 180);
+            panelInput.Name = "panelInput";
+            panelInput.Size = new Size(250, 165);
+            panelInput.TabIndex = 14;
+            panelInput.Visible = false;
+            // 
+            // btnSend
+            // 
+            btnSend.Location = new Point(3, 132);
+            btnSend.Name = "btnSend";
+            btnSend.Size = new Size(94, 29);
+            btnSend.TabIndex = 15;
+            btnSend.Text = "Send";
+            btnSend.UseVisualStyleBackColor = true;
+            btnSend.Click += btnSend_Click;
             // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panelInput);
             Controls.Add(TxtOutput);
             Controls.Add(lblfuel);
             Controls.Add(lvlfuel);
@@ -144,6 +226,10 @@
             Load += FormCar_Load;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)inputSpeed1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)inputSpeed2).EndInit();
+            panelInput.ResumeLayout(false);
+            panelInput.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,5 +247,11 @@
         private Button lvlfuel;
         private Label lblfuel;
         private RichTextBox TxtOutput;
+        private NumericUpDown inputSpeed1;
+        private NumericUpDown inputSpeed2;
+        private Label label1;
+        private Label label2;
+        private Panel panelInput;
+        private Button btnSend;
     }
 }

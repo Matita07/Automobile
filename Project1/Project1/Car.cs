@@ -15,7 +15,7 @@
         public string brand { get; set; }
         public string model { get; set; }
         public string color { get; set; }
-        internal bool on { get; set; } //defines whether the machine is on or off.
+        public bool on { get; set; } //defines whether the machine is on or off.
         public engine engineType { get; set; }
         public int speed { get; private set; }
         #endregion
