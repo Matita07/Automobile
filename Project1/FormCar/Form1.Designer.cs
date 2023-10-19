@@ -49,6 +49,7 @@
             btnRequest = new Button();
             lblRqstFuel = new Label();
             panel1 = new Panel();
+            lblSpeed = new Label();
             Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)inputSpeed1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)inputSpeed2).BeginInit();
@@ -239,11 +240,21 @@
             panel1.TabIndex = 18;
             panel1.Visible = false;
             // 
+            // lblSpeed
+            // 
+            lblSpeed.AutoSize = true;
+            lblSpeed.Location = new Point(12, 386);
+            lblSpeed.Name = "lblSpeed";
+            lblSpeed.Size = new Size(58, 20);
+            lblSpeed.TabIndex = 19;
+            lblSpeed.Text = "Speed: ";
+            // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 451);
+            Controls.Add(lblSpeed);
             Controls.Add(panel1);
             Controls.Add(btnRequest);
             Controls.Add(panelInput);
@@ -291,5 +302,6 @@
         private Button btnRequest;
         private Label lblRqstFuel;
         private Panel panel1;
+        private Label lblSpeed;
     }
 }

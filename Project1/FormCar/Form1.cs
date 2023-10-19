@@ -4,7 +4,7 @@ namespace FormCar
 {
     public partial class FormCar : Form
     {
-        public InheritCar myCar = new InheritCar(new Random().Next(50, 100), "Fiat", "Panda", "Blue", false, engine.Diesel, new Random().Next(50, 100));
+        public InheritCar myCar = new InheritCar(new Random().Next(50, 100), "Fiat", "Panda", "Blue", false, engine.Diesel, 0);
         public int valueSpeed;
         public int value;
 
@@ -29,13 +29,11 @@ namespace FormCar
         private void accellerateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelInput.Visible = true;
-            btnSend.Tag = "1";
         }
 
         private void slowDownToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelInput.Visible = true;
-            btnSend.Tag = "0";
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -43,23 +41,15 @@ namespace FormCar
             this.valueSpeed = Int32.Parse(inputSpeed1.Text);
             this.value = Int32.Parse(inputSpeed2.Text);
 
-            int slowDown;
-
-            if (btnSend.Tag == "0") 
-                slowDown = myCar.deaccelerate(this.valueSpeed, myCar.speed, this.value);
-            else
-                slowDown = myCar.Accelerate(this.valueSpeed, myCar.speed, this.value);
-
-
+            int slowDown = myCar.deaccelerate(this.valueSpeed, myCar.speed, this.value);
             TxtOutput.Text = "Speed = " + slowDown + " Km/h";
 
-            lblfuel.Text = "fuel: " + myCar.petrolLevel;
+            lblfuel.Text = "Fuel = " + myCar.petrolLevel.ToString();
         }
         private void FormCar_Load(object sender, EventArgs e)
         {
             lblRqstFuel.Visible = false;
             nmrcFuel.Visible = false;
-            lblfuel.Text = "fuel: " + myCar.petrolLevel;
         }
 
         private void btnRequest_Click(object sender, EventArgs e)
@@ -70,7 +60,16 @@ namespace FormCar
         private void lvlfuel_Click(object sender, EventArgs e)
         {
             myCar.refill(Int32.Parse(nmrcFuel.Text));
-            lblfuel.Text = "good! " + myCar.petrolLevel;
+            if (myCar.petrolLevel >= 0)
+                lblfuel.Text = "fuel: " + myCar.petrolLevel + " (Full)";
+            else
+                lblfuel.Text = "fuel: " + myCar.petrolLevel;
+        }
+
+        private void FormCar_Load(object sender, EventArgs e)
+        {
+            lblfuel.Text = "fuel: " + myCar.petrolLevel;
+            lblSpeed.Text = "Speed: " + myCar.speed;
         }
     }
 }
