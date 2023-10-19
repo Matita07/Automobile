@@ -52,7 +52,7 @@ namespace FormCar
 
             TxtOutput.Text = "Speed = " + this.valueSpeed + " Km/h";
 
-            lblfuel.Text = "fuel = " + myCar.petrolLevel.ToString();
+            lblfuel.Text = "fuel = " + myCar.petrolLevel.ToString();g
         }
         private void FormCar_Load(object sender, EventArgs e)
         {
@@ -71,12 +71,6 @@ namespace FormCar
             myCar.refill(Int32.Parse(nmrcFuel.Text));
             if (myCar.petrolLevel >= 100)
                 lblfuel.Text = "fuel: " + myCar.petrolLevel + " (Full)";
-            else if (myCar.petrolLevel <= 0)
-            {
-                myCar.petrolLevel = 0;
-                lblfuel.Text = "fuel: " + myCar.petrolLevel;
-            }
-                
         }
     }
 }
