@@ -61,10 +61,14 @@ namespace FormCar
         private void lvlfuel_Click(object sender, EventArgs e)
         {
             myCar.refill(Int32.Parse(nmrcFuel.Text));
-            if (myCar.petrolLevel >= 0)
+            if (myCar.petrolLevel >= 100)
                 lblfuel.Text = "fuel: " + myCar.petrolLevel + " (Full)";
-            else
+            else if (myCar.petrolLevel <= 0)
+            {
+                myCar.petrolLevel = 0;
                 lblfuel.Text = "fuel: " + myCar.petrolLevel;
+            }
+                
         }
     }
 }
