@@ -251,6 +251,7 @@
             }
         }
 
+        //Maxspeed = speed that you want, speed = actual speed, value = variable that determines acceleration
         public int Accelerate(int maxSpeed, int speed, int value)
         {
             if(value > maxSpeed)
@@ -270,6 +271,7 @@
                 // decremente Petrol Level
                 this.petrolLevel -= maxSpeed;
 
+                //stop condition
                 if (this.petrolLevel <= 0)
                 {
                     Console.WriteLine("\nNo more petrol, please refill!\n");
