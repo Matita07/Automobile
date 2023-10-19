@@ -4,7 +4,7 @@ namespace FormCar
 {
     public partial class FormCar : Form
     {
-        public InheritCar myCar = new InheritCar(new Random().Next(50, 100), "Fiat", "Panda", "Blue", false, engine.Diesel, new Random().Next(50, 100));
+        public InheritCar myCar = new InheritCar(new Random().Next(50, 100), "Fiat", "Panda", "Blue", false, engine.Diesel, 0);
         public int valueSpeed;
         public int value;
 
@@ -54,12 +54,16 @@ namespace FormCar
         private void lvlfuel_Click(object sender, EventArgs e)
         {
             myCar.refill(Int32.Parse(nmrcFuel.Text));
-            lblfuel.Text = "refile done! " + myCar.petrolLevel;
+            if (myCar.petrolLevel >= 0)
+                lblfuel.Text = "fuel: " + myCar.petrolLevel + " (Full)";
+            else
+                lblfuel.Text = "fuel: " + myCar.petrolLevel;
         }
 
         private void FormCar_Load(object sender, EventArgs e)
         {
             lblfuel.Text = "fuel: " + myCar.petrolLevel;
+            lblSpeed.Text = "Speed: " + myCar.speed;
         }
     }
 }
