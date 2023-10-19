@@ -64,11 +64,11 @@
                 {
                     case 1:
                         // Starting the vehicle
-                        this.start();
+                        Console.WriteLine(this.start());
                         break;
                     case 2:
                         // Stopping the vehicle
-                        this.stop();
+                        Console.WriteLine(this.stop());
                         break;
                     case 3:
                         // Check if Petrol Level is full

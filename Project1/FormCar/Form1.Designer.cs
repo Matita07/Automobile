@@ -59,6 +59,7 @@
             startOption.Name = "startOption";
             startOption.Size = new Size(180, 50);
             startOption.Text = "Start";
+            startOption.Click += startOption_Click;
             // 
             // stopOption
             // 
@@ -87,20 +88,6 @@
             slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
-            // labelSpeed
-            // 
-            labelSpeed.Location = new Point(0, 0);
-            labelSpeed.Name = "labelSpeed";
-            labelSpeed.Size = new Size(100, 23);
-            labelSpeed.TabIndex = 8;
-            // 
-            // labelFuel
-            // 
-            labelFuel.Location = new Point(0, 0);
-            labelFuel.Name = "labelFuel";
-            labelFuel.Size = new Size(100, 23);
-            labelFuel.TabIndex = 7;
-            // 
             // lvlfuel
             // 
             lvlfuel.Location = new Point(674, 396);
@@ -109,7 +96,6 @@
             lvlfuel.TabIndex = 3;
             lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
-            lvlfuel.Click += lvlfuel_Click;
             // 
             // lblfuel
             // 
@@ -137,8 +123,6 @@
             Controls.Add(TxtOutput);
             Controls.Add(lblfuel);
             Controls.Add(lvlfuel);
-            Controls.Add(labelFuel);
-            Controls.Add(labelSpeed);
             Controls.Add(Menu);
             MainMenuStrip = Menu;
             Name = "FormCar";

@@ -10,14 +10,10 @@ namespace FormCar
         {
             InitializeComponent();
         }
-        private void accellerateToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void startOption_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lvlfuel_Click(object sender, EventArgs e)
-        {
-
+            TxtOutput.Text = myCar.start();
         }
 
         private void TxtOutput_TextChanged(object sender, EventArgs e)
