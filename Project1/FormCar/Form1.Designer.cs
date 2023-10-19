@@ -31,10 +31,10 @@
             Menu = new MenuStrip();
             startOption = new ToolStripMenuItem();
             stopOption = new ToolStripMenuItem();
+            refillOption = new ToolStripMenuItem();
             moveOption = new ToolStripMenuItem();
             accellerateToolStripMenuItem = new ToolStripMenuItem();
             slowDownToolStripMenuItem = new ToolStripMenuItem();
-            refillOption = new ToolStripMenuItem();
             label1 = new Label();
             Menu.SuspendLayout();
             SuspendLayout();
@@ -63,6 +63,13 @@
             stopOption.Size = new Size(180, 50);
             stopOption.Text = "Stop";
             // 
+            // refillOption
+            // 
+            refillOption.AutoSize = false;
+            refillOption.Name = "refillOption";
+            refillOption.Size = new Size(180, 50);
+            refillOption.Text = "Refill";
+            // 
             // moveOption
             // 
             moveOption.AutoSize = false;
@@ -74,21 +81,14 @@
             // accellerateToolStripMenuItem
             // 
             accellerateToolStripMenuItem.Name = "accellerateToolStripMenuItem";
-            accellerateToolStripMenuItem.Size = new Size(224, 26);
+            accellerateToolStripMenuItem.Size = new Size(167, 26);
             accellerateToolStripMenuItem.Text = "Accellerate";
             // 
             // slowDownToolStripMenuItem
             // 
             slowDownToolStripMenuItem.Name = "slowDownToolStripMenuItem";
-            slowDownToolStripMenuItem.Size = new Size(224, 26);
+            slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
-            // 
-            // refillOption
-            // 
-            refillOption.AutoSize = false;
-            refillOption.Name = "refillOption";
-            refillOption.Size = new Size(180, 50);
-            refillOption.Text = "Refill";
             // 
             // label1
             // 
