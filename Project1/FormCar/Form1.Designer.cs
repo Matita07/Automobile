@@ -129,6 +129,7 @@
             lvlfuel.TabIndex = 3;
             lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
+            lvlfuel.Click += lvlfuel_Click;
             // 
             // lblfuel
             // 
@@ -244,6 +245,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(172, 50);
             panel1.TabIndex = 18;
+            panel1.Visible = false;
             // 
             // FormCar
             // 

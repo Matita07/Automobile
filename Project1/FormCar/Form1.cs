@@ -54,13 +54,18 @@ namespace FormCar
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            panel1.Visible = true;
         }
 
         private void lvlfuel_Click(object sender, EventArgs e)
         {
             myCar.refill(Int32.Parse(nmrcFuel.Text));
-            lblfuel.Text = "good! " + myCar.petrolLevel;
+            lblfuel.Text = "refile done! " + myCar.petrolLevel;
+        }
+
+        private void FormCar_Load(object sender, EventArgs e)
+        {
+            lblfuel.Text = "fuel: " + myCar.petrolLevel;
         }
     }
 }
