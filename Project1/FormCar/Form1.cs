@@ -19,5 +19,10 @@ namespace FormCar
         {
 
         }
+
+        private void TxtOutput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
