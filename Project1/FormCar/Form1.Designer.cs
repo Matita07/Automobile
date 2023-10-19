@@ -63,8 +63,8 @@
             Menu.Items.AddRange(new ToolStripItem[] { startOption, stopOption, moveOption });
             Menu.Location = new Point(0, 0);
             Menu.Name = "Menu";
-            Menu.Padding = new Padding(70, 2, 0, 2);
-            Menu.Size = new Size(700, 54);
+            Menu.Padding = new Padding(80, 3, 0, 3);
+            Menu.Size = new Size(800, 56);
             Menu.TabIndex = 0;
             Menu.Text = "Menu";
             // 
@@ -95,14 +95,14 @@
             // accellerateToolStripMenuItem
             // 
             accellerateToolStripMenuItem.Name = "accellerateToolStripMenuItem";
-            accellerateToolStripMenuItem.Size = new Size(133, 22);
+            accellerateToolStripMenuItem.Size = new Size(167, 26);
             accellerateToolStripMenuItem.Text = "Accellerate";
             accellerateToolStripMenuItem.Click += accellerateToolStripMenuItem_Click;
             // 
             // slowDownToolStripMenuItem
             // 
             slowDownToolStripMenuItem.Name = "slowDownToolStripMenuItem";
-            slowDownToolStripMenuItem.Size = new Size(133, 22);
+            slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             slowDownToolStripMenuItem.Click += slowDownToolStripMenuItem_Click;
             // 
@@ -122,10 +122,9 @@
             // 
             // lvlfuel
             // 
-            lvlfuel.Location = new Point(590, 297);
-            lvlfuel.Margin = new Padding(3, 2, 3, 2);
+            lvlfuel.Location = new Point(674, 396);
             lvlfuel.Name = "lvlfuel";
-            lvlfuel.Size = new Size(100, 34);
+            lvlfuel.Size = new Size(114, 45);
             lvlfuel.TabIndex = 3;
             lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
@@ -134,51 +133,48 @@
             // lblfuel
             // 
             lblfuel.AutoSize = true;
-            lblfuel.Location = new Point(614, 280);
+            lblfuel.Location = new Point(702, 373);
             lblfuel.Name = "lblfuel";
-            lblfuel.Size = new Size(0, 15);
+            lblfuel.Size = new Size(0, 20);
             lblfuel.TabIndex = 6;
             // 
             // TxtOutput
             // 
-            TxtOutput.Location = new Point(10, 58);
-            TxtOutput.Margin = new Padding(3, 2, 3, 2);
+            TxtOutput.Location = new Point(11, 77);
             TxtOutput.Name = "TxtOutput";
-            TxtOutput.Size = new Size(680, 67);
+            TxtOutput.Size = new Size(777, 88);
             TxtOutput.TabIndex = 9;
             TxtOutput.Text = "";
             // 
             // inputSpeed1
             // 
-            inputSpeed1.Location = new Point(3, 25);
-            inputSpeed1.Margin = new Padding(3, 2, 3, 2);
+            inputSpeed1.Location = new Point(3, 33);
             inputSpeed1.Name = "inputSpeed1";
-            inputSpeed1.Size = new Size(169, 23);
+            inputSpeed1.Size = new Size(193, 27);
             inputSpeed1.TabIndex = 10;
             // 
             // inputSpeed2
             // 
-            inputSpeed2.Location = new Point(3, 68);
-            inputSpeed2.Margin = new Padding(3, 2, 3, 2);
+            inputSpeed2.Location = new Point(3, 91);
             inputSpeed2.Name = "inputSpeed2";
-            inputSpeed2.Size = new Size(169, 23);
+            inputSpeed2.Size = new Size(193, 27);
             inputSpeed2.TabIndex = 11;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(3, 8);
+            label1.Location = new Point(3, 11);
             label1.Name = "label1";
-            label1.Size = new Size(122, 15);
+            label1.Size = new Size(154, 20);
             label1.TabIndex = 12;
             label1.Text = "Insert speed to reach: ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(3, 50);
+            label2.Location = new Point(3, 67);
             label2.Name = "label2";
-            label2.Size = new Size(153, 15);
+            label2.Size = new Size(193, 20);
             label2.TabIndex = 13;
             label2.Text = "Insert the step for speeding:";
             // 
@@ -190,38 +186,35 @@
             panelInput.Controls.Add(label2);
             panelInput.Controls.Add(inputSpeed1);
             panelInput.Controls.Add(inputSpeed2);
-            panelInput.Location = new Point(10, 135);
-            panelInput.Margin = new Padding(3, 2, 3, 2);
+            panelInput.Location = new Point(11, 180);
             panelInput.Name = "panelInput";
-            panelInput.Size = new Size(219, 124);
+            panelInput.Size = new Size(250, 165);
             panelInput.TabIndex = 14;
             panelInput.Visible = false;
             // 
             // btnSend
             // 
-            btnSend.Location = new Point(3, 99);
-            btnSend.Margin = new Padding(3, 2, 3, 2);
+            btnSend.Location = new Point(3, 132);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(82, 22);
+            btnSend.Size = new Size(94, 29);
             btnSend.TabIndex = 15;
+            btnSend.Tag = "0";
             btnSend.Text = "Send";
             btnSend.UseVisualStyleBackColor = true;
             btnSend.Click += btnSend_Click;
             // 
             // nmrcFuel
             // 
-            nmrcFuel.Location = new Point(9, 23);
-            nmrcFuel.Margin = new Padding(3, 2, 3, 2);
+            nmrcFuel.Location = new Point(10, 31);
             nmrcFuel.Name = "nmrcFuel";
-            nmrcFuel.Size = new Size(59, 23);
+            nmrcFuel.Size = new Size(67, 27);
             nmrcFuel.TabIndex = 15;
             // 
             // btnRequest
             // 
-            btnRequest.Location = new Point(485, 297);
-            btnRequest.Margin = new Padding(3, 2, 3, 2);
+            btnRequest.Location = new Point(554, 396);
             btnRequest.Name = "btnRequest";
-            btnRequest.Size = new Size(100, 34);
+            btnRequest.Size = new Size(114, 45);
             btnRequest.TabIndex = 16;
             btnRequest.Text = "Request Fuel";
             btnRequest.UseVisualStyleBackColor = true;
@@ -230,9 +223,9 @@
             // lblRqstFuel
             // 
             lblRqstFuel.AutoSize = true;
-            lblRqstFuel.Location = new Point(3, 2);
+            lblRqstFuel.Location = new Point(3, 8);
             lblRqstFuel.Name = "lblRqstFuel";
-            lblRqstFuel.Size = new Size(149, 15);
+            lblRqstFuel.Size = new Size(184, 20);
             lblRqstFuel.TabIndex = 17;
             lblRqstFuel.Text = "How much fuel you want ?";
             // 
@@ -240,18 +233,17 @@
             // 
             panel1.Controls.Add(lblRqstFuel);
             panel1.Controls.Add(nmrcFuel);
-            panel1.Location = new Point(517, 227);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(590, 304);
             panel1.Name = "panel1";
-            panel1.Size = new Size(172, 50);
+            panel1.Size = new Size(197, 67);
             panel1.TabIndex = 18;
             panel1.Visible = false;
             // 
             // FormCar
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
             Controls.Add(panel1);
             Controls.Add(btnRequest);
             Controls.Add(panelInput);
@@ -260,7 +252,6 @@
             Controls.Add(lvlfuel);
             Controls.Add(Menu);
             MainMenuStrip = Menu;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormCar";
             Text = "Form Car";
             Load += FormCar_Load;
