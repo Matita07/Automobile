@@ -16,9 +16,9 @@ namespace FormCar
             TxtOutput.Text = myCar.start();
         }
 
-        private void TxtOutput_TextChanged(object sender, EventArgs e)
+        private void stopOption_Click(object sender, EventArgs e)
         {
-
+            TxtOutput.Text = myCar.stop();
         }
     }
 }

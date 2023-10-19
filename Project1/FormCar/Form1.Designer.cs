@@ -67,6 +67,7 @@
             stopOption.Name = "stopOption";
             stopOption.Size = new Size(180, 50);
             stopOption.Text = "Stop";
+            stopOption.Click += stopOption_Click;
             // 
             // moveOption
             // 
@@ -88,6 +89,20 @@
             slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
+            // labelSpeed
+            // 
+            labelSpeed.Location = new Point(0, 0);
+            labelSpeed.Name = "labelSpeed";
+            labelSpeed.Size = new Size(100, 23);
+            labelSpeed.TabIndex = 0;
+            // 
+            // labelFuel
+            // 
+            labelFuel.Location = new Point(0, 0);
+            labelFuel.Name = "labelFuel";
+            labelFuel.Size = new Size(100, 23);
+            labelFuel.TabIndex = 0;
+            // 
             // lvlfuel
             // 
             lvlfuel.Location = new Point(674, 396);
@@ -104,7 +119,7 @@
             lblfuel.Name = "lblfuel";
             lblfuel.Size = new Size(0, 20);
             lblfuel.TabIndex = 6;
-            lblfuel.Text = "fuel: " + myCar.petrolLevel;
+            lblfuel.Text = "Fuel: " + myCar.petrolLevel;
             // 
             // TxtOutput
             // 
@@ -113,7 +128,6 @@
             TxtOutput.Size = new Size(776, 65);
             TxtOutput.TabIndex = 9;
             TxtOutput.Text = "";
-            TxtOutput.TextChanged += TxtOutput_TextChanged;
             // 
             // FormCar
             // 
