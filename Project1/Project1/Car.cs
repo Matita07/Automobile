@@ -219,6 +219,19 @@
             return n;
         }
 
+        public int deaccellera(int speed)
+        {
+            if (this.on)
+            {
+                if (this.petrolLevel <= 0)
+                    return 0;
+                else
+                    return this.speed -= speed;
+            }
+            else
+                return -1;
+        }
+
         /// <summary>
         /// Slow down method
         /// </summary>
