@@ -20,5 +20,20 @@ namespace FormCar
         {
 
         }
+
+        private void lvlfuel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rqsfuel_Click(object sender, EventArgs e)
+        {
+            TxtOutput.Text = "How much reifl you want? ";
+        }
+
+        private void FormCar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

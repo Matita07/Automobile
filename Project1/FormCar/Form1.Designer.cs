@@ -88,6 +88,20 @@
             slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
+            // labelSpeed
+            // 
+            labelSpeed.Location = new Point(0, 0);
+            labelSpeed.Name = "labelSpeed";
+            labelSpeed.Size = new Size(100, 23);
+            labelSpeed.TabIndex = 0;
+            // 
+            // labelFuel
+            // 
+            labelFuel.Location = new Point(0, 0);
+            labelFuel.Name = "labelFuel";
+            labelFuel.Size = new Size(100, 23);
+            labelFuel.TabIndex = 0;
+            // 
             // lvlfuel
             // 
             lvlfuel.Location = new Point(674, 396);
@@ -96,6 +110,7 @@
             lvlfuel.TabIndex = 3;
             lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
+            lvlfuel.Click += lvlfuel_Click;
             // 
             // lblfuel
             // 
@@ -104,7 +119,6 @@
             lblfuel.Name = "lblfuel";
             lblfuel.Size = new Size(0, 20);
             lblfuel.TabIndex = 6;
-            lblfuel.Text = "fuel: " + myCar.petrolLevel;
             // 
             // TxtOutput
             // 
@@ -127,6 +141,7 @@
             MainMenuStrip = Menu;
             Name = "FormCar";
             Text = "Form Car";
+            Load += FormCar_Load;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             ResumeLayout(false);
