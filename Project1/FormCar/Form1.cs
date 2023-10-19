@@ -57,19 +57,22 @@ namespace FormCar
             this.value = Int32.Parse(inputSpeed2.Text);
         }
 
-        private void lvlfuel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Rqsfuel_Click(object sender, EventArgs e)
-        {
-            TxtOutput.Text = "How much reifl you want? ";
-        }
-
         private void FormCar_Load(object sender, EventArgs e)
         {
+            lblRqstFuel.Visible = false;
+            nmrcFuel.Visible = false;
+        }
 
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            lblRqstFuel.Visible = true;
+            nmrcFuel.Visible = true;
+        }
+
+        private void lvlfuel_Click(object sender, EventArgs e)
+        {
+            myCar.refill(Int32.Parse(nmrcFuel.Text));
+            lblfuel
         }
     }
 }
