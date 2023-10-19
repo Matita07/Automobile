@@ -46,9 +46,15 @@ namespace FormCar
             TxtOutput.Text = "Speed = " + slowDown + " Km/h";
         }
 
-        private void Rqsfuel_Click(object sender, EventArgs e)
+        private void btnRequest_Click(object sender, EventArgs e)
         {
-            TxtOutput.Text = "How much refill you want? ";
+            panel1.Visible = false;
+        }
+
+        private void lvlfuel_Click(object sender, EventArgs e)
+        {
+            myCar.refill(Int32.Parse(nmrcFuel.Text));
+            lblfuel.Text = "good! " + myCar.petrolLevel;
         }
     }
 }

@@ -45,10 +45,16 @@
             label2 = new Label();
             panelInput = new Panel();
             btnSend = new Button();
+            nmrcFuel = new NumericUpDown();
+            btnRequest = new Button();
+            lblRqstFuel = new Label();
+            panel1 = new Panel();
             Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)inputSpeed1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)inputSpeed2).BeginInit();
             panelInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nmrcFuel).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
@@ -114,20 +120,6 @@
             labelFuel.Size = new Size(100, 23);
             labelFuel.TabIndex = 0;
             // 
-            // labelSpeed
-            // 
-            labelSpeed.Location = new Point(0, 0);
-            labelSpeed.Name = "labelSpeed";
-            labelSpeed.Size = new Size(100, 23);
-            labelSpeed.TabIndex = 0;
-            // 
-            // labelFuel
-            // 
-            labelFuel.Location = new Point(0, 0);
-            labelFuel.Name = "labelFuel";
-            labelFuel.Size = new Size(100, 23);
-            labelFuel.TabIndex = 0;
-            // 
             // lvlfuel
             // 
             lvlfuel.Location = new Point(674, 396);
@@ -144,7 +136,6 @@
             lblfuel.Name = "lblfuel";
             lblfuel.Size = new Size(0, 20);
             lblfuel.TabIndex = 6;
-            lblfuel.Text = "Fuel = " + myCar.petrolLevel;
             // 
             // TxtOutput
             // 
@@ -210,11 +201,48 @@
             btnSend.UseVisualStyleBackColor = true;
             btnSend.Click += btnSend_Click;
             // 
+            // nmrcFuel
+            // 
+            nmrcFuel.Location = new Point(10, 31);
+            nmrcFuel.Name = "nmrcFuel";
+            nmrcFuel.Size = new Size(67, 27);
+            nmrcFuel.TabIndex = 15;
+            // 
+            // btnRequest
+            // 
+            btnRequest.Location = new Point(554, 396);
+            btnRequest.Name = "btnRequest";
+            btnRequest.Size = new Size(114, 45);
+            btnRequest.TabIndex = 16;
+            btnRequest.Text = "Request Fuel";
+            btnRequest.UseVisualStyleBackColor = true;
+            btnRequest.Click += btnRequest_Click;
+            // 
+            // lblRqstFuel
+            // 
+            lblRqstFuel.AutoSize = true;
+            lblRqstFuel.Location = new Point(3, 3);
+            lblRqstFuel.Name = "lblRqstFuel";
+            lblRqstFuel.Size = new Size(184, 20);
+            lblRqstFuel.TabIndex = 17;
+            lblRqstFuel.Text = "How much fuel you want ?";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(lblRqstFuel);
+            panel1.Controls.Add(nmrcFuel);
+            panel1.Location = new Point(591, 303);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(197, 67);
+            panel1.TabIndex = 18;
+            // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
+            Controls.Add(btnRequest);
             Controls.Add(panelInput);
             Controls.Add(TxtOutput);
             Controls.Add(lblfuel);
@@ -229,6 +257,9 @@
             ((System.ComponentModel.ISupportInitialize)inputSpeed2).EndInit();
             panelInput.ResumeLayout(false);
             panelInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nmrcFuel).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -252,5 +283,9 @@
         private Label label2;
         private Panel panelInput;
         private Button btnSend;
+        private NumericUpDown nmrcFuel;
+        private Button btnRequest;
+        private Label lblRqstFuel;
+        private Panel panel1;
     }
 }
