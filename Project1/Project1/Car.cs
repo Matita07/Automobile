@@ -98,17 +98,17 @@
         /// <summary>
         /// Method to start the car's engine
         /// </summary>
-        public void start()
+        public string start()
         {
             // check the petrol level if it's over 0
             if (this.on)
             {
                 if (this.petrolLevel > 2)
-                    Console.WriteLine("The " + this.brand + " " + this.model + " is already going");
+                    return "The " + this.brand + " " + this.model + " is already going";
                 else
                 {
                     this.on = false;
-                    Console.WriteLine("Not enough petrol, please refill your " + this.brand + " " + this.model);
+                    return "Not enough petrol, please refill your " + this.brand + " " + this.model;
                 }
             }
             else
@@ -117,17 +117,17 @@
                 {
                     petrolLevel -= 1; // Copyright: Suecomo
                     this.on = true;
-                    Console.WriteLine("The " + this.brand + " " + this.model + " started his engine");
+                    return "The " + this.brand + " " + this.model + " started his engine";
                 }
                 else
-                    Console.WriteLine("Not enough petrol, please refill your " + this.brand + " " + this.model);
+                    return "Not enough petrol, please refill your " + this.brand + " " + this.model;
             }
         }
 
         /// <summary>
         /// Method to stop the car's engine
         /// </summary>
-        public void stop()
+        public string stop()
         {
             // check the petrol level if it's over 0
             if (this.on)
@@ -136,21 +136,21 @@
                 {
                     this.on = false;
                     if (this.petrolLevel > 0)
-                        Console.WriteLine("The " + this.brand + " " + this.model + " stopped");
+                        return "The " + this.brand + " " + this.model + " stopped";
                     else
-                        Console.WriteLine("The " + this.brand + " " + this.model + " stopped beacause there's no petrol");
+                        return "The " + this.brand + " " + this.model + " stopped beacause there's no petrol";
                 }
                 else
                 {
-                    Console.WriteLine("The car is moving, can't stop now");
+                    return "The car is moving, can't stop now";
                 }
             }
             else
             {
                 if (this.petrolLevel > 0)
-                    Console.WriteLine("The " + this.brand + " " + this.model + " is already off");
+                    return "The " + this.brand + " " + this.model + " is already off";
                 else
-                    Console.WriteLine("The " + this.brand + " " + this.model + " is already off but there's no petrol");
+                    return "The " + this.brand + " " + this.model + " is already off but there's no petrol";
             }
         }
 
