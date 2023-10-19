@@ -76,10 +76,8 @@ namespace FormCar
                 myCar.petrolLevel = 0;
                 lblfuel.Text = "fuel: " + myCar.petrolLevel;
             }
-            else
-                lblfuel.Text = "fuel: " + myCar.petrolLevel;
-
-
+            else  
+				lblfuel.Text = "fuel: " + myCar.petrolLevel;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -219,6 +219,21 @@
             return n;
         }
 
+        public int deaccellera(int speed)
+        {
+            // check if the car is on
+            if (this.on)
+            {
+                // check if the fuel isn't 0
+                if (this.petrolLevel <= 0)
+                    return 0;
+                else
+                    return this.speed -= speed;
+            }
+            else
+                return -1;
+        }
+
         /// <summary>
         /// Slow down method
         /// </summary>
@@ -270,7 +285,13 @@
                 //Console.WriteLine("Accellerate up... " + speed + " km/h");
 
                 // decremente Petrol Level
-                this.petrolLevel -= maxSpeed;
+                if (maxSpeed % value == 0)
+                    this.petrolLevel -= value;
+                else
+                {
+                    value = maxSpeed - speed;
+                    this.petrolLevel -= value;
+                }
 
                 //stop condition
                 if (this.petrolLevel <= 0)
