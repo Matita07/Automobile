@@ -8,14 +8,9 @@
 
 using Project1;
 
-// Initialize object "Car" with constructores
-InheritCar myCar = new InheritCar(new Random().Next(50, 100), "Fiat", "Panda", "Blue", false, engine.Diesel, new Random().Next(50, 100));
-
 // Call print() method
 //myCar.print();
 
 // Call go() method
 //Console.WriteLine(myCar.carStatus());
 
-// Call menu() method
-myCar.getFunction();

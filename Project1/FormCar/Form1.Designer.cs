@@ -35,7 +35,8 @@
             moveOption = new ToolStripMenuItem();
             accellerateToolStripMenuItem = new ToolStripMenuItem();
             slowDownToolStripMenuItem = new ToolStripMenuItem();
-            label1 = new Label();
+            labelSpeed = new Label();
+            labelFuel = new Label();
             Menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,21 +91,33 @@
             slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
-            // label1
+            // labelSpeed
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 64);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            labelSpeed.AutoSize = true;
+            labelSpeed.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSpeed.Location = new Point(12, 64);
+            labelSpeed.Name = "labelSpeed";
+            labelSpeed.Size = new Size(173, 30);
+            labelSpeed.TabIndex = 1;
+            labelSpeed.Text = "Speed = 0 Km/h";
+            // 
+            // labelFuel
+            // 
+            labelFuel.AutoSize = true;
+            labelFuel.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            labelFuel.Location = new Point(12, 94);
+            labelFuel.Name = "labelFuel";
+            labelFuel.Size = new Size(108, 30);
+            labelFuel.TabIndex = 2;
+            labelFuel.Text = "Fuel = " +  + " L";
             // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(labelFuel);
+            Controls.Add(labelSpeed);
             Controls.Add(Menu);
             MainMenuStrip = Menu;
             Name = "FormCar";
@@ -124,6 +137,7 @@
         private ToolStripMenuItem accellerateToolStripMenuItem;
         private ToolStripMenuItem slowDownToolStripMenuItem;
         private ToolStripMenuItem refillOption;
-        private Label label1;
+        private Label labelSpeed;
+        private Label labelFuel;
     }
 }

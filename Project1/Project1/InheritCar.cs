@@ -1,6 +1,6 @@
 ﻿namespace Project1
 {
-    internal class InheritCar : Car
+    public class InheritCar : Car
     {
         #region Constructors
         /// <summary>
