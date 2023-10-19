@@ -14,5 +14,10 @@ namespace FormCar
         {
 
         }
+
+        private void lvlfuel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

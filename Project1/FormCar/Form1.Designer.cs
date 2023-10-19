@@ -38,6 +38,7 @@
             labelFuel = new Label();
             lvlfuel = new Button();
             lblfuel = new Label();
+            TxtOutput = new RichTextBox();
             Menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,13 +78,13 @@
             // accellerateToolStripMenuItem
             // 
             accellerateToolStripMenuItem.Name = "accellerateToolStripMenuItem";
-            accellerateToolStripMenuItem.Size = new Size(224, 26);
+            accellerateToolStripMenuItem.Size = new Size(167, 26);
             accellerateToolStripMenuItem.Text = "Accellerate";
             // 
             // slowDownToolStripMenuItem
             // 
             slowDownToolStripMenuItem.Name = "slowDownToolStripMenuItem";
-            slowDownToolStripMenuItem.Size = new Size(224, 26);
+            slowDownToolStripMenuItem.Size = new Size(167, 26);
             slowDownToolStripMenuItem.Text = "Slow Down";
             // 
             // labelSpeed
@@ -108,6 +109,7 @@
             lvlfuel.TabIndex = 3;
             lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
+            lvlfuel.Click += lvlfuel_Click;
             // 
             // lblfuel
             // 
@@ -116,13 +118,21 @@
             lblfuel.Name = "lblfuel";
             lblfuel.Size = new Size(0, 20);
             lblfuel.TabIndex = 6;
-            lblfuel.Text = "fuel: " + myCar.petrolLevel;
+            // 
+            // TxtOutput
+            // 
+            TxtOutput.Location = new Point(12, 77);
+            TxtOutput.Name = "TxtOutput";
+            TxtOutput.Size = new Size(776, 65);
+            TxtOutput.TabIndex = 9;
+            TxtOutput.Text = "";
             // 
             // FormCar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(TxtOutput);
             Controls.Add(lblfuel);
             Controls.Add(lvlfuel);
             Controls.Add(labelFuel);
@@ -149,5 +159,6 @@
         private Label labelFuel;
         private Button lvlfuel;
         private Label lblfuel;
+        private RichTextBox TxtOutput;
     }
 }
