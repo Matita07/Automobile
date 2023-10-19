@@ -114,6 +114,20 @@
             labelFuel.Size = new Size(100, 23);
             labelFuel.TabIndex = 0;
             // 
+            // labelSpeed
+            // 
+            labelSpeed.Location = new Point(0, 0);
+            labelSpeed.Name = "labelSpeed";
+            labelSpeed.Size = new Size(100, 23);
+            labelSpeed.TabIndex = 0;
+            // 
+            // labelFuel
+            // 
+            labelFuel.Location = new Point(0, 0);
+            labelFuel.Name = "labelFuel";
+            labelFuel.Size = new Size(100, 23);
+            labelFuel.TabIndex = 0;
+            // 
             // lvlfuel
             // 
             lvlfuel.Location = new Point(674, 396);
@@ -122,6 +136,7 @@
             lvlfuel.TabIndex = 3;
             lvlfuel.Text = "Refill";
             lvlfuel.UseVisualStyleBackColor = true;
+            lvlfuel.Click += lvlfuel_Click;
             // 
             // lblfuel
             // 
@@ -209,6 +224,7 @@
             MainMenuStrip = Menu;
             Name = "FormCar";
             Text = "Form Car";
+            Load += FormCar_Load;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)inputSpeed1).EndInit();

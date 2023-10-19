@@ -43,5 +43,20 @@ namespace FormCar
             int slowDown = myCar.deaccelerate(this.valueSpeed, myCar.speed, this.value);
             TxtOutput.Text = "Speed = " + slowDown + " Km/h";
         }
+
+        private void lvlfuel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rqsfuel_Click(object sender, EventArgs e)
+        {
+            TxtOutput.Text = "How much reifl you want? ";
+        }
+
+        private void FormCar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
