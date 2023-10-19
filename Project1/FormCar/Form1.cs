@@ -16,34 +16,18 @@ namespace FormCar
         private void startOption_Click(object sender, EventArgs e)
         {
             TxtOutput.Text = myCar.start();
+            panelInput.Visible = false;
         }
 
         private void stopOption_Click(object sender, EventArgs e)
         {
             TxtOutput.Text = myCar.stop();
+            panelInput.Visible = false;
         }
 
         private void accellerateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (myCar.on)
-            {
-                // Initialize value for slowing Down & accellerating
-                int value = myCar.getValue("Insert Value: ");
-
-                // Initialize minSpeed for slowing Down & accellerating
-                int maxSpeed = myCar.getValue("Insert the speed to reach: ");
-
-                Console.WriteLine();
-
-                // Initialize slowDown variable for prograssively slowing down
-                int accelerate = myCar.Accelerate(maxSpeed, myCar.speed, value);
-
-                if (accelerate >= 0)
-                    TxtOutput.Text = "Accellerate up... " + accelerate + " Km/h";
-            }
-            else
-                TxtOutput.Text = "You can't accellerate, the car in off";
-
+            panelInput.Visible = true;
         }
 
         private void slowDownToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +39,9 @@ namespace FormCar
         {
             this.valueSpeed = Int32.Parse(inputSpeed1.Text);
             this.value = Int32.Parse(inputSpeed2.Text);
+
+            int slowDown = myCar.deaccelerate(this.valueSpeed, myCar.speed, this.value);
+            TxtOutput.Text = "Speed = " + slowDown + " Km/h";
         }
 
         private void FormCar_Load(object sender, EventArgs e)

@@ -135,6 +135,7 @@
             lblfuel.Name = "lblfuel";
             lblfuel.Size = new Size(0, 20);
             lblfuel.TabIndex = 6;
+            lblfuel.Text = "Fuel = " + myCar.petrolLevel;
             // 
             // TxtOutput
             // 

@@ -26,7 +26,8 @@
         /// </summary>
         public Car()
         {
-            this.petrolLevel = 10;
+            this.petrolLevel = 50;
+            this.speed = 0;
         }
 
         /// <summary>
@@ -244,7 +245,7 @@
                 else
                 {
                     // Print the decrement
-                    Console.WriteLine("Slowing down... " + speed + " Km/h");
+                    //"Slowing down... " + speed + " Km/h";
                     // return the recursive function with the speed slowed
                     return this.speed = deaccelerate(minSpeed, speed - value, value);
                 }
