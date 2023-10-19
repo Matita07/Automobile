@@ -55,6 +55,7 @@ namespace FormCar
         private void btnRequest_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
+            lblfuel.Text = "Fuel: " + myCar.petrolLevel;
         }
 
         private void lvlfuel_Click(object sender, EventArgs e)
@@ -64,12 +65,6 @@ namespace FormCar
                 lblfuel.Text = "fuel: " + myCar.petrolLevel + " (Full)";
             else
                 lblfuel.Text = "fuel: " + myCar.petrolLevel;
-        }
-
-        private void FormCar_Load(object sender, EventArgs e)
-        {
-            lblfuel.Text = "fuel: " + myCar.petrolLevel;
-            lblSpeed.Text = "Speed: " + myCar.speed;
         }
     }
 }

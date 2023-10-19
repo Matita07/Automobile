@@ -224,6 +224,7 @@
             // lblRqstFuel
             // 
             lblRqstFuel.AutoSize = true;
+
             lblRqstFuel.Location = new Point(3, 8);
             lblRqstFuel.Name = "lblRqstFuel";
             lblRqstFuel.Size = new Size(184, 20);
@@ -234,7 +235,7 @@
             // 
             panel1.Controls.Add(lblRqstFuel);
             panel1.Controls.Add(nmrcFuel);
-            panel1.Location = new Point(590, 304);
+            panel1.Location = new Point(591, 303);
             panel1.Name = "panel1";
             panel1.Size = new Size(197, 67);
             panel1.TabIndex = 18;
@@ -242,12 +243,10 @@
             // 
             // lblSpeed
             // 
-            lblSpeed.AutoSize = true;
-            lblSpeed.Location = new Point(12, 386);
+            lblSpeed.Location = new Point(0, 0);
             lblSpeed.Name = "lblSpeed";
-            lblSpeed.Size = new Size(58, 20);
-            lblSpeed.TabIndex = 19;
-            lblSpeed.Text = "Speed: ";
+            lblSpeed.Size = new Size(100, 23);
+            lblSpeed.TabIndex = 21;
             // 
             // FormCar
             // 
@@ -265,7 +264,6 @@
             MainMenuStrip = Menu;
             Name = "FormCar";
             Text = "Form Car";
-            Load += FormCar_Load;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)inputSpeed1).EndInit();
